@@ -1,0 +1,16 @@
+result = ""
+
+for a in range(100, 301):
+
+    i = a
+    t = False
+    for k in range(0, 3):
+        if (i % 10) & 1:
+            t = True
+            break
+        i //= 10
+    if t:
+        continue
+    result += "%d," % a
+
+print(result[0:len(result) - 1])
