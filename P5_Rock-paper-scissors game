@@ -1,0 +1,28 @@
+lst=["가위","바위","보"]
+man1=input("man1 순서입니다.: ")
+man2=input("man2 순서입니다.: ")
+result="잘못된 값입니다."
+
+if man1==lst[0]:
+    if man2==lst[0]:
+        result = "Result : Draw"
+    elif man2==lst[1]:
+        result = "Result : man2 win!"
+    elif man2==lst[2]:
+        result = "Result : man1 win!"
+if man1==lst[1]:
+    if man2==lst[0]:
+        result = "Result : man1 win!"
+    elif man2==lst[1]:
+        result = "Result : Draw"
+    elif man2==lst[2]:
+        result="Result : man2 win!"
+if man1==lst[2]:
+    if man2==lst[0]:
+        result="Result : man2 win!"
+    elif man2==lst[1]:
+        result="Result : man1 win!"
+    elif man2==lst[2]:
+        result="Result : Draw"
+
+print(result)
