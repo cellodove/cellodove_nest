@@ -1,0 +1,6 @@
+spell=input("알파벳을 임력하세요.:" )
+
+if spell.isupper():
+    print("%s => %s" %(spell,spell.lower()))
+elif spell.islower():
+    print("%s => %s" %(spell,spell.upper()
