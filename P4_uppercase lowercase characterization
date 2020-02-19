@@ -1,0 +1,16 @@
+'''
+spell=input("영어를입력하세요: ")
+
+if  spell.isupper():
+    print("%s는 대문자입니다." %spell)
+else:
+    print("%s는 소문자입니다." %spell)
+'''
+
+
+spell=input("영어를입력하세요: ")
+
+if  'A'<=spell<='Z':
+    print("%s는 대문자입니다." %spell)
+else:
+    print("%s는 소문자입니다." %spell)
