@@ -1,0 +1,8 @@
+i=range(2,10)
+num=range(1,10)
+
+for k in i:
+    for h in num:
+        print("{0} * {1} = {2:>2} ".format(k,h,k*h))
+        if h==9:
+            print()
