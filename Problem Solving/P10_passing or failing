@@ -1,0 +1,8 @@
+studnet=[88,30,61,55,95]
+
+for i in range(0,5):
+    if studnet[i]>60:
+        spass="합격"
+    else:
+        spass="불합격"
+    print("%d학생은 %d점으로 %s입니다." %(i+1, studnet[i], spass))
