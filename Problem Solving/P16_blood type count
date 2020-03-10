@@ -1,0 +1,6 @@
+bloods=['A', 'A', 'A', 'O', 'B', 'B', 'O', 'AB', 'AB', 'O']
+re={'A':0, 'B':0, 'O':0, 'AB':0}
+
+for i in bloods:
+    re[i]+=1
+print(re)
