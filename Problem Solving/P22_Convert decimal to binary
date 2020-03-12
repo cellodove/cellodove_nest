@@ -1,0 +1,5 @@
+i=int(input())
+a=[]
+while i!=0:
+    a.append(i%2)
+    i=i//2
