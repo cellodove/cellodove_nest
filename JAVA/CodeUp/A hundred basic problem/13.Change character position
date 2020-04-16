@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+
+
+        String i, k;
+        Scanner SC = new Scanner(System.in);
+        i = SC.next();
+        k = SC.next();
+        System.out.print(k+" "+i);
+
+
+
+    }
+
+
+}
