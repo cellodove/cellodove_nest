@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+
+
+        float i;
+        Scanner SC = new Scanner(System.in);
+        i = SC.nextFloat();
+        System.out.printf("%.6f",i);
+
+
+
+    }
+
+
+}
