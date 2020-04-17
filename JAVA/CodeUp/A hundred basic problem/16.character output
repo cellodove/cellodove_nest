@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+         String i;
+        Scanner SC = new Scanner((System.in));
+
+        i = SC.next();
+
+        System.out.printf("%s",i);
+
+
+
+
+
+    }
+
+
+}
+
+
