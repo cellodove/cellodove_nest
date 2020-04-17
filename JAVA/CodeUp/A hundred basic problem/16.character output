@@ -4,13 +4,15 @@ public class main {
 
     public static void main(String[] args) {
 
-         String i;
+        String k;
+
         Scanner SC = new Scanner((System.in));
+        k=SC.next();
+        String[] arr=k.split("\\:");
+        int A = Integer.valueOf(arr[0]);
+        int B = Integer.valueOf(arr[1]);
 
-        i = SC.next();
-
-        System.out.printf("%s",i);
-
+        System.out.printf("%d:%d",A,B);
 
 
 
@@ -18,6 +20,11 @@ public class main {
     }
 
 
+
+
+
 }
+
+
 
 
