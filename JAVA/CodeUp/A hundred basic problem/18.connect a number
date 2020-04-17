@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        String k;
+
+        Scanner SC = new Scanner((System.in));
+        k=SC.next();
+        String[] arr=k.split("\\-");
+        int A = Integer.valueOf(arr[0]);
+        int B = Integer.valueOf(arr[1]);
+
+        System.out.printf("%06d%07d",A,B);
+
+
+
+
+    }
+
+
+
+
+
+}
+
