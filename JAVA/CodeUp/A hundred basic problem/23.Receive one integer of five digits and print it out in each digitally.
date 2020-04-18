@@ -1,0 +1,24 @@
+import java.lang.reflect.Array;
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+
+        int B = (A / 10000);
+        int C = (A % 10000 / 1000);
+        int D = (A % 10000 % 1000 / 100);
+        int E = (A % 10000 % 1000 % 100 / 10);
+        int F = (A % 10000 % 1000 % 100 % 10);
+
+
+        System.out.printf("[%d]\n",B * 10000);
+        System.out.printf("[%d]\n",C * 1000);
+        System.out.printf("[%d]\n",D * 100);
+        System.out.printf("[%d]\n",E * 10);
+        System.out.printf("[%d]\n",F);
+
+
+    }
+}
