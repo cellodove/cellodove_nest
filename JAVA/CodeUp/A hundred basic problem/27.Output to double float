@@ -1,0 +1,17 @@
+
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        double AA = SC.nextDouble();
+
+        System.out.printf("%.11f", AA);
+
+
+    }
+
+
+}
