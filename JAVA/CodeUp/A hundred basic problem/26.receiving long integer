@@ -1,0 +1,22 @@
+
+import java.util.Scanner;
+
+public class main {
+
+
+    public static void main(String[] args) {
+
+        Scanner NUM = new Scanner(System.in);
+
+         long A = NUM.nextLong();
+
+        System.out.print(A);
+
+
+    }
+
+
+
+
+
+}
