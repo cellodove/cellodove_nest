@@ -1,0 +1,22 @@
+
+import java.util.Scanner;
+
+public class main {
+
+
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+
+        char A;
+        A = SC.next().charAt(0);
+        int AA = (int)A;
+
+
+        System.out.printf("%d",AA);
+
+
+    }
+
+
+}
