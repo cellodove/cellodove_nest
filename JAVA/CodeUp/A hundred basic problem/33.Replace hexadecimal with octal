@@ -1,0 +1,22 @@
+
+import java.util.Scanner;
+
+public class main {
+
+
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+
+        String dd;
+        dd = SC.next();
+
+        int a = Integer.valueOf(dd,16);
+
+        System.out.printf(Integer.toOctalString(a));
+
+
+    }
+
+
+}
