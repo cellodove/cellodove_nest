@@ -1,0 +1,21 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class main {
+
+
+    public static void main(String[] args) {
+
+        Scanner Sc = new Scanner(System.in);
+
+        char A = Sc.next().charAt(0);
+        int B = (int) A;
+        B++;
+        char C = (char) B;
+
+        System.out.printf("%c", C);
+
+
+    }
+
+}
