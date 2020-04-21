@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner SN = new Scanner(System.in);
+
+        int A = SN.nextInt();
+        int B = SN.nextInt();
+        int C = SN.nextInt();
+
+        float SUM = A + B + C;
+
+        System.out.printf("%.0f\n", SUM);
+        System.out.printf("%.1f", SUM / 3);
+
+
+    }
+
+
+}
