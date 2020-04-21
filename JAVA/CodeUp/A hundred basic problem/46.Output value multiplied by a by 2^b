@@ -1,0 +1,21 @@
+
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner SN = new Scanner(System.in);
+
+        int A = SN.nextInt();
+        int B = SN.nextInt();
+        Double C = Math.pow(2, B);
+
+
+        System.out.printf("%.0f", A * C);
+
+
+    }
+
+
+}
