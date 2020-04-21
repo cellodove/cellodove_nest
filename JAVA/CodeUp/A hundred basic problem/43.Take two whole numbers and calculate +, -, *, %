@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner SN = new Scanner(System.in);
+
+        float A = SN.nextLong();
+        float B = SN.nextLong();
+
+        System.out.printf("%.0f\n", A+B);
+        System.out.printf("%.0f\n", A-B);
+        System.out.printf("%.0f\n", A*B);
+        System.out.printf("%.0f\n", A/B);
+        System.out.printf("%.0f\n", A%B);
+        System.out.printf("%.2f\n", A/B);
+
+
+
+
+    }
+
+
+
+
+}
