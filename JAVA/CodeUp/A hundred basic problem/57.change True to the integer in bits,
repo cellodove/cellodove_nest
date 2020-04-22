@@ -1,0 +1,15 @@
+
+import java.util.Scanner;
+
+public class main {
+
+
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        int A = SC.nextInt();
+        System.out.printf("%d",~A);
+
+        SC.close();
+    }
+}
