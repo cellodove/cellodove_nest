@@ -1,0 +1,18 @@
+
+import java.util.Scanner;
+
+public class main {
+
+
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        int A = SC.nextInt();
+        if (A == 0) {
+
+            System.out.print(1);
+        } else if (A == 1) {
+            System.out.print(0);
+        }
+    }
+}
