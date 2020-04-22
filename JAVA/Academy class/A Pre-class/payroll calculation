@@ -1,27 +1,4 @@
-Skip to content
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@cellodove 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-cellodove
-/
-cellodove_nest
-1
-00
- Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security 0 Insights Settings
-cellodove_nest/JAVA/Academy class/Pre-learning
-@cellodove cellodove payroll calculation
-7f0e503 6 hours ago
-37 lines (27 sloc)  726 Bytes
-  
 package project1;
 
 import java.util.Scanner;
@@ -59,15 +36,3 @@ public class main {
 	}
 
 }
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
