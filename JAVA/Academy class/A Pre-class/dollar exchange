@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+
+public class main {
+
+    static double 미달러환율(double WON) {
+
+        double dollar;
+
+        dollar = WON * 0.0008084;
+
+        return dollar;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        System.out.print("원화를 입력하세요: ");
+
+        double score;
+        score = SC.nextInt();
+
+        System.out.print(미달러환율(score));
+        System.out.print(" 달러 입니다.");
+    }
+
+
+}
