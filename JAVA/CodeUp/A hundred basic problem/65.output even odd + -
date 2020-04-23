@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class main {
+
+    public static void main(String[] args) {
+        
+        Scanner SC = new Scanner(System.in);
+        int A = SC.nextInt();
+
+        if (A > 0) {
+            System.out.println("plus");
+            if (A % 2 == 0) {
+                System.out.println("even");
+            } else {
+                System.out.println("odd");
+            }
+
+        } else {
+            System.out.println("minus");
+            if (A % 2 == 0) {
+                System.out.println("even");
+            } else {
+                System.out.println("odd");
+            }
+
+        }
+    }
+
+
+}
