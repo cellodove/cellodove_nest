@@ -1,0 +1,18 @@
+
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner SN = new Scanner(System.in);
+
+        int A = SN.nextInt();
+        int B = SN.nextInt();
+        System.out.printf("%d", A | B);
+
+
+    }
+
+
+}
