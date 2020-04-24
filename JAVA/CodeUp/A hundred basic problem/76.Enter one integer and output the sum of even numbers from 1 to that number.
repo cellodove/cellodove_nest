@@ -1,0 +1,26 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        int A = SC.nextInt();
+        int AA = 0;
+        int SUM = 0;
+
+        while (AA <= A) {
+
+            if (AA % 2 == 0) {
+
+                SUM = SUM + AA;
+
+            }
+            AA++;
+
+        }
+        System.out.print(SUM);
+
+
+    }
+}
