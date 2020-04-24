@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        int A = SC.nextInt();
+        int B = SC.nextInt();
+
+        int i;
+        int j;
+        for (i = 1; i <= A; i++) {
+            for (j = 1; j <= B; j++) {
+                System.out.printf("%d %d\n", i, j);
+            }
+
+
+        }
+
+
+    }
+}
