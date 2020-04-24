@@ -1,0 +1,21 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        String A = SC.next();
+        char AA = A.charAt(0);
+        char AAA = 'a';
+
+
+        do {
+
+            System.out.println(AAA);
+            ++AAA;
+
+
+        } while (AAA <= AA);
+    }
+}
