@@ -1,0 +1,20 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        int A;
+        A = SC.nextInt();
+        while (A != 0) {
+
+            System.out.println(A);
+            --A;
+
+
+        }
+
+
+    }
+}
