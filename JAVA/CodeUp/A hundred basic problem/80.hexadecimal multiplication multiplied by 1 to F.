@@ -1,0 +1,21 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        String A = SC.next();
+        //문자열을 정수로 바꿔줌
+        int B = Integer.parseInt(A, 16);
+
+        int C = 1;
+        while (C <= 15) {
+            System.out.printf("%X*%X=%X\n", B, C, B * C); //형변환 주의할것
+            C++;
+
+        }
+
+
+    }
+}
