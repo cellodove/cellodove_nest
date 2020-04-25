@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        int R = SC.nextInt();
+        int G = SC.nextInt();
+        int B = SC.nextInt();
+        int i, j, k;
+        int SUM=0;
+
+        for (i = 0; i < R; i++) {
+
+            for (j = 0; j < G; j++) {
+
+                for (k = 0; k < B; k++) {
+
+                    System.out.printf("%d %d %d\n", i, j, k);
+                    SUM=SUM+1;
+
+                }
+            }
+        }
+        System.out.print(SUM);
+    }
+}
