@@ -1,0 +1,18 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        double W, H, B;
+        W = SC.nextDouble();
+        H = SC.nextDouble();
+        B = SC.nextDouble();
+        double Result = 0;
+        Result = (((W * H * B) / 8) / 1024) / 1024;
+        System.out.printf("%.2f MB", Result);
+
+
+    }
+}
