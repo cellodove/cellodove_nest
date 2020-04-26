@@ -1,0 +1,22 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        long First = SC.nextLong();
+        long M = SC.nextLong();
+        long D = SC.nextLong();
+        long n = SC.nextLong();
+        
+        long Count = First;
+        long i;
+
+        for (i = 1; i < n; i++) {
+            Count = (Count * M) + D;
+
+        }
+        System.out.println(Count);
+    }
+}
