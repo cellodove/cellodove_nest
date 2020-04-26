@@ -1,0 +1,88 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        double Hz, Bit, Ch, Sec;
+        Hz = SC.nextDouble();
+        Bit = SC.nextDouble();
+        Ch = SC.nextDouble();
+        Sec = SC.nextDouble();
+        double Result = 0;
+
+        if (Bit == 8) {
+            if (Ch == 1) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 2) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 3) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 4) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 5) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            }
+        }
+        if (Bit == 16) {
+            if (Ch == 1) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 2) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 3) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 4) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 5) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            }
+        }
+        if (Bit == 24) {
+            if (Ch == 1) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 2) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 3) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 4) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 5) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            }
+        }
+        if (Bit == 32) {
+            if (Ch == 1) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 2) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 3) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 4) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            } else if (Ch == 5) {
+                Result = (((Hz * Bit * Ch * Sec) / 8) / 1024) / 1024;
+                System.out.printf("%.1f MB", Result);
+            }
+        }
+    }
+}
