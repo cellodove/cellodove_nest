@@ -1,0 +1,29 @@
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        int A = SC.nextInt();
+
+        int CLASS[] = new int[A + 1]; //배열 생성
+        Arrays.fill(CLASS, 0); //배열 초기화
+
+        int i;
+        int num;
+        for (i = 1; i < CLASS.length; i++) {
+            num = SC.nextInt();
+            CLASS[i] += num;
+        }
+        int MIN = CLASS[1]; //배열[0]은 버리니깐 [1]부터시작해야함
+        for (i = 1; i < CLASS.length; i++) {
+            if (MIN > CLASS[i]) {
+                MIN = CLASS[i];
+            }
+        }
+        System.out.print(MIN);
+    }
+}
