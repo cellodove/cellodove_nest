@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        int A = SC.nextInt();
+        int B = SC.nextInt();
+        int C = SC.nextInt();
+
+        int DAY = 0;
+
+        while (true) {
+            DAY++;
+            if (DAY % A == 0 && DAY % B == 0 && DAY % C == 0) {
+                System.out.print(DAY);
+                break;
+            }
+        }
+    }
+}
