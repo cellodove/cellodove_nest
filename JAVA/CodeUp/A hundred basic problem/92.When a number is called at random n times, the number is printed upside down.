@@ -1,0 +1,25 @@
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner SC = new Scanner(System.in);
+        int A = SC.nextInt();
+
+        int CLASS[] = new int[A+1]; //배열 생성
+        Arrays.fill(CLASS, 0); //배열 초기화
+
+        int i;
+        int num;
+        for (i = 1; i < CLASS.length; i++) {
+            num = SC.nextInt();
+            CLASS[i] += num;
+        }
+        for (i = A; i > 0; i--) {
+            System.out.print(CLASS[i] + " ");
+        }
+    }
+}
