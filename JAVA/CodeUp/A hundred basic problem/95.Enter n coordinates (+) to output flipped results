@@ -1,0 +1,55 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+
+        int Badok[][] = new int[19][19];     //배열20by20정의 0은 안쓰기에 20으로설정
+        Scanner SC = new Scanner(System.in);
+
+        int i, j;
+        for (i = 0; i < 19; i++) {
+            String inbadok = SC.nextLine(); //한줄을 스트링값으로 이어받는다 19번
+            String inbadoksp[] = inbadok.split(" "); //받은 스트링값을 공백으로 나눈다. 총19개의 공백과 문자가 들어오기에 19개의 값이 저장됨
+            for (j = 0; j < 19; j++) {
+                Badok[i][j] = Integer.parseInt(inbadoksp[j]); //스트링형식으로 저장된 배열을 정수형으로 바꿔주고  한줄씩 바둑 배열에 넣어준다.
+            }
+        }  //입력받은 배열을 저장한 상태
+
+        int WH = SC.nextInt();
+
+        for (int k = 0; k < WH; k++) {
+            String XY = SC.nextLine();
+            String XYSP[] = XY.split(" ");
+            int X = Integer.parseInt(XYSP[0]) - 1;
+            int Y = Integer.parseInt(XYSP[1]) - 1;
+
+            for (i = 0; i < 19; i++) {
+
+                if (Badok[X][i] == 1) {
+                    Badok[X][i] = 1;
+                } else {
+                    Badok[X][i] = 0;
+                }
+            }
+
+            for (j = 0; j < 19; j++) {
+
+                if (Badok[Y][j] == 1) {
+                    Badok[Y][j] = 0;
+                } else {
+                    Badok[Y][j] = 1;
+                }
+            }
+
+        }
+        for (i = 0; i < 19; i++) {
+            for (j = 0; j < 19; j++) {
+                System.out.print(Badok[i][j] + " ");
+            }
+            System.out.println("");
+
+        }
+    }
+}
