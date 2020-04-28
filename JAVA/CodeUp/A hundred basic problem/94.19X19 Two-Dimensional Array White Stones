@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+
+        int Badok[][] = new int[20][20];
+
+        Scanner SC = new Scanner(System.in);
+
+
+        int CC = SC.nextInt();
+        int NUM;
+        for (NUM = 1; NUM <= CC; NUM++) {
+
+            int AA = SC.nextInt();
+            int BB = SC.nextInt();
+            Badok[AA][BB] += 1;
+
+        }
+        int i, j;
+        for (i = 1; i <= 19; i++) {
+            for (j = 1; j <= 19; j++) {
+                System.out.printf("%d ",Badok[i][j]);
+            }
+            System.out.printf("\n");
+        }
+    }
+}
