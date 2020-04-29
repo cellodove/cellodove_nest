@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        //격자판 입력된 세로 가로로 만들기
+        Scanner SC = new Scanner(System.in);
+        int h = SC.nextInt();
+        int w = SC.nextInt();
+        int Grid[][] = new int[h][w];
+
+        //막대의 갯수 입력
+        int n = SC.nextInt();
+
+        //막대가 만들어지는 부분
+        for (int i = 1; i <= n; i++) {
+
+            int l = SC.nextInt(); //막대의 길이
+            int d = SC.nextInt(); //막대의 방향 가로는 0 세로는 1
+            int x = SC.nextInt() - 1; // 막대의 x좌표
+            int y = SC.nextInt() - 1; //막대의 y좌표
+
+            if (d == 0) {
+                for (int j = y; j < y + l; j++) {
+                    if (j < w) {
+                        Grid[x][j] = 1;
+                    }
+                }
+            } else if (d == 1) {
+                for (int k = x; k < x + l; k++) {
+                    if (k < h) {
+                        Grid[k][y] = 1;
+                    }
+                }
+            }
+        }
+        //System.out.print("\n");
+        for (int z = 0; z < Grid.length; z++) {
+            for (int q = 0; q < Grid[z].length; q++) {
+                System.out.print(Grid[z][q] + " ");
+            }
+            System.out.print("\n");
+        }
+    }
+}
