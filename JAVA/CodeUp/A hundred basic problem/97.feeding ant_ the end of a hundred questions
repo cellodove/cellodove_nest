@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        //10by10 미로생성
+        int maze[][] = new int[10][10];
+
+
+        //미로 초기화
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                int ini = scanner.nextInt();
+                maze[i][j] = ini;
+            }
+        }
+        //System.out.print("\n");
+
+        //개미출발
+        int x = 1;
+        int y = 1;
+        boolean meat = false;
+        while (meat!=true) {
+            if (maze[x][y + 1] == 1) { //오른쪽이 1(벽)이고
+                if (maze[x + 1][y] == 1) { //아래쪽도 벽이면 끝.
+                    break;
+                } else { //아래쪽은뚤려있다면 아래로 이동
+                    x++;
+                }
+
+            }else if(maze[x][y+1]!=1){ //오른쪽이 벽이아니라면 오른쪽으로 이동
+                y++;
+            }
+            if(maze[x][y]==2){ //이동하고 도착한 위치에 먹이가있다면 끝.
+                meat=true;
+            }
+            if(maze[1][1]==2){ //먹이가 시작지점에있다면 끝.
+                break;
+            }
+            maze[x][y]=9; //이동한곳은 9로 바꾼다.
+        }
+        maze[1][1]=9; //처음시작점9리고 적음
+
+
+            //미로출력
+            for (int i = 0; i < 10; i++) {
+                for (int j = 0; j < 10; j++) {
+                    System.out.print(maze[i][j] + " ");
+                }
+                System.out.print("\n");
+            }
+        }
+    }
