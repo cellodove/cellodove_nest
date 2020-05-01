@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        //동전의 종류갯수입력
+        int kindOfCoin = scanner.nextInt();
+
+        //동전으로 바꿀돈입력
+        int paperMoney = scanner.nextInt();
+
+        //동전종류가짓수 배열 초기화
+        int kindOfCoinArr[] = new int[kindOfCoin];
+
+        //동전종류 입력 동전의 가치는 오름차순으로 입력됨
+        for(int j = 0; j<kindOfCoinArr.length; j++){
+            kindOfCoinArr[j]=scanner.nextInt();
+        }
+
+        //동전갯수 초기값입력
+        int theNumberOfCoins = 0;
+
+        //동전의 종류만큼 나누기
+        for (int i = kindOfCoinArr.length-1; i >= 0; i--) {//기본 배열보다 한칸작아야함 가치가 오름가순이기때문에 최소동전을위해 뒤부터계산)
+            theNumberOfCoins += paperMoney / kindOfCoinArr[i]; //기본돈에 동전의종류로 나눔 몇번나눠지는지를 넣는다. (동전의 갯수)
+            paperMoney%=kindOfCoinArr[i]; //기본돈에 동전을 나눈것에 나머지를 넣는다. 나눈걸 빼야하니깐
+            
+            if(paperMoney==0){//더이상 나눌 돈이없어지면 끝난다.
+                break;
+            }
+        }
+        System.out.print(theNumberOfCoins);
+    }
+}
