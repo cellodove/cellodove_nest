@@ -1,0 +1,34 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //사람의 수
+        int numberOfPeople = scanner.nextInt();
+
+        //사람의 수만큼 배열만들기
+        int people[] = new int[numberOfPeople];
+
+        //각사람당 걸리는 시간 각사람당 넣기
+        for (int i = 0; i < numberOfPeople; i++) {
+            int timeTaken = scanner.nextInt();
+            people[i] = timeTaken;
+        }
+
+        //시간짦은순으로 오름차순 정렬
+        Arrays.sort(people);
+
+        //초기화
+        int totalTime = 0;
+
+        //팩터리얼을 더해줌 맨마지막 배열을 빼줘가면서
+        for (int j = people.length; j > 0; j--) {
+            for (int k = 0; k < j; k++) {
+                totalTime = totalTime + people[k];
+            }
+        }
+        System.out.print(totalTime);
+    }
+}
