@@ -1,0 +1,68 @@
+import java.io.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.StringTokenizer;
+
+
+public class main2 {
+    public static void main(String[] args) {
+        try{
+            //버퍼 초기화
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+            //한줄의 버퍼를 회의갯수에 넣는다 인로로 바꿔서
+            int theNumberOfMeetings = Integer.parseInt(bufferedReader.readLine());
+
+            //미팅시간을 2차원배열로 생성 회의갯수에 맞춰서
+            int [][] meetingTime = new int[theNumberOfMeetings][2];
+
+            //회의 갯수만큼 각회의당 회의 걸리는시간 입력
+            for(int i =0; i<theNumberOfMeetings; i++){
+                //버터를 공백으로 나누어 데이터화 시킬준비.
+                StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+                for(int j = 0; j<2; j++){
+                    //시작시간과 종료시간을 2차원배열에 넣는다.
+                    meetingTime[i][j]=Integer.parseInt(stringTokenizer.nextToken());
+                }
+            }
+            
+            // 사용자정의 오름차순 정리 끝나는 시간순으로 정리
+            Arrays.sort(meetingTime, new Comparator<int[]>() {
+                @Override
+                public int compare(int[] o1, int[] o2) {
+                    //만약 첫번째랑 두번째 [1]배열값이 같다면
+                    if(o1[1]==o2[1]){
+                        /*반환해라 첫번째-두번째 [0]배열값의 뺀값을 음수거나 0이면 자리그대로 양수면은 서로 자리교환
+                        양수가되면 앞에배열이 더 크가는뜻으로 오름차순정리를위해 뒤로 보내야함*/
+                        return o1[0]-o2[0];
+
+                        //만약 첫번째랑 두번째 [1]배열값이 다르다면
+                    }else{
+                        /*반환해라 첫번째-두번째 [1]배열값의 뺀값을 음수거나 0이면 자리그대로 양수면은 서로 자리교환
+                        양수가되면 앞에배열이 더 크가는뜻으로 오름차순정리를위해 뒤로 보내야함*/
+                        return o1[1]-o2[1];
+                    }
+                }
+            });
+            //카운트 초기화
+            int count = 0;
+            //끝나는 시간 초기값
+            int endingTime = -1;
+            //미팅의 수만큼 반복
+            for(int i = 0; i<theNumberOfMeetings; i++){
+                //만약 배열[i][0]값이 끝나는시간보다 크거나 같으면
+                if(meetingTime[i][0]>=endingTime){
+                    //끝나느시간을 [i][1]로 대입한다. 즉 그회의의 끝나는 시간대로 바꾼다는 것이다.
+                    endingTime=meetingTime[i][1];
+                    //카운트한다.
+                    count++;
+                }
+            }
+            System.out.println(count);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+}
