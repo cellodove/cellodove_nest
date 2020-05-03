@@ -1,0 +1,40 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
+
+public class main {
+    public static void main(String[] args)throws IOException {
+        //입력 받을 준비
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        //로프의 갯수
+        int numberOfRopes = Integer.parseInt(bufferedReader.readLine());
+
+        //로프의 갯수만큼 행렬 생성
+        int allowableLoadOfRopeArrays[]= new int[numberOfRopes];
+
+
+        //로프마다 허용하중 입력
+        for(int i = 0; i<numberOfRopes; i++){
+            int allowableLoadofRope = Integer.parseInt(bufferedReader.readLine());
+            if(allowableLoadofRope>=1 && allowableLoadofRope<=100000) {
+                allowableLoadOfRopeArrays[i] = allowableLoadofRope;
+            }
+
+        }
+        //로프의 허용하중 오름차순 정렬
+        Arrays.sort(allowableLoadOfRopeArrays);
+
+        int maximumLoad=0;
+        for(int i = numberOfRopes-1; i>=0; i--){
+
+            allowableLoadOfRopeArrays[i]=allowableLoadOfRopeArrays[i]*(numberOfRopes-i);
+            if(maximumLoad<allowableLoadOfRopeArrays[i]){
+                maximumLoad = allowableLoadOfRopeArrays[i];
+            }
+        }
+        System.out.print(maximumLoad);
+    }
+}
