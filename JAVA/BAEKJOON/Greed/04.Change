@@ -1,0 +1,36 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+public class main {
+    public static void main(String[] args) {
+
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            long moneyReceived = Integer.parseInt(bufferedReader.readLine());
+            long kindOfCoin[] = new long[6];
+            long theNumberOfCoins = 0;
+            long cost = 1000-moneyReceived;
+
+            kindOfCoin[0] = 500;
+            kindOfCoin[1] = 100;
+            kindOfCoin[2] = 50;
+            kindOfCoin[3] = 10;
+            kindOfCoin[4] = 5;
+            kindOfCoin[5] = 1;
+
+            for (int i = 0; i < kindOfCoin.length; i++) {
+                if(cost/kindOfCoin[i]>0) {
+                    theNumberOfCoins += cost / kindOfCoin[i];
+                    cost %= kindOfCoin[i];
+                }
+            }
+
+
+            System.out.print(theNumberOfCoins);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
