@@ -1,0 +1,37 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class main {
+    public static void main(String[] args) throws IOException {
+
+        //입력준비
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String input = bufferedReader.readLine();
+
+        //input들어온 값을 마이너스 어래이에 '-'를 기준으로 나누어 넣는다.
+        String[] miusArray = input.split("\\-");
+
+        //마이너스 배열에서 '-'앞부분을 +기준으로 나눈다.
+        String[] plusArray = miusArray[0].split("\\+");
+
+        int frontMinus = 0;
+
+        //마이너스 앞부분 숫자들을 전부 더한다.
+        for (String i : plusArray) {
+            frontMinus += Integer.parseInt(i);
+        }
+
+        int sum = 0;
+        //마이너스 어래이 -뒷부분부터 끝까지 +를 기준으로 나누어 마이너스섬에 배열로 넣는다.
+        for (int i = 1; i < miusArray.length; i++) {
+            String[] minuSum = miusArray[i].split("\\+");
+
+            //나누어진 마이너스 섬 배열을 섬에 차례로 더해 넣는다. 정수형으로.
+            for (String k : minuSum) {
+                sum += Integer.parseInt(k);
+            }
+        }
+        System.out.println(frontMinus-sum);
+    }
+}
