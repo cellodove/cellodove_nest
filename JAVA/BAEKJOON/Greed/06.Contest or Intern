@@ -1,0 +1,59 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class main {
+    public static void main(String[] args) throws IOException {
+        //버퍼준비
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        //띄어쓰기 입력준비
+        StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+
+        //받은 토큰중 첫번째 입력 여자수
+        int woman = Integer.parseInt(stringTokenizer.nextToken());
+        //받은 토큰중 두번째 입력 남자수
+        int man = Integer.parseInt(stringTokenizer.nextToken());
+        //받은 토큰중 세번째 입력 인턴수
+        int intern = Integer.parseInt(stringTokenizer.nextToken());
+
+        //여자팀 초기화
+        int womanteam = 0;
+        //여자팀은 2명으로 이루어져있다.
+        womanteam = woman / 2;
+
+        //전체팀 초기화 전체팀의 여자 남자 비율은 2:1 이다.
+        int unityTeam = 0;
+
+        //만약 남자의수가 여자팀의수보다 크거나 같을때
+        if (womanteam <= man) {
+            //여자팀의수가 곧 전체체팀
+            unityTeam = womanteam;
+            //만약 여자팀의 수가 더많으면 남자의 수가곧 전체팀의수
+        } else {
+            unityTeam = man;
+        }
+        
+        
+        //팀 이루어지고 남은 사람들
+        int womanrest = 0;
+        int manrest = 0;
+        
+        womanrest = woman-(unityTeam*2);
+        manrest = man - unityTeam;
+        
+        //전체나머지는 여자나머지 더하기 남자 나머지
+        int sumrest = womanrest + manrest;
+
+        //인턴수랑 전체나머지수랑 맞을때까지 반복
+        while (true) {
+            if (sumrest >= intern) {
+                System.out.print(unityTeam);
+                break;
+            } else {
+                unityTeam--;
+                sumrest += 3;
+            }
+        }
+    }
+}
