@@ -4,62 +4,60 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 
-    public class main {
-        public static void main(String[] args) throws IOException {
-            //입력 초기화
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-            //테스트 갯수
-            int numberOfTests = Integer.parseInt(bufferedReader.readLine());
 
-            //각테스트마다 합격자를 추가할 합격자 배열을 만든다
-            int[] result = new int[numberOfTests];
+public class main {
+    public static void main(String[] args) throws IOException {
+        //입력 초기화
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-            //테스트 갯수만큼 반복
-            for (int i = 0; i < numberOfTests; i++) {
-                //합격자수 초기화 서류심사 1등은 통과기 때문에 초기1 잡아줌
-                int successfulCandidate = 1;
+        //테스트 갯수
+        int numberOfTests = Integer.parseInt(bufferedReader.readLine());
 
-                //각 테스트당 지원자수
-                int numberOfApplicants = Integer.parseInt(bufferedReader.readLine());
+        //각테스트마다 합격자를 추가할 합격자 배열을 만든다
+        int[] result = new int[numberOfTests];
 
-                //지원자 성적 배열에 넣기
-                int applicantsGradesArray2[][] = new int[numberOfApplicants][2];
-                for (int j = 0; j < numberOfApplicants; j++) {
-                    String[] applicantsGradesArray1 = bufferedReader.readLine().split(" ");
-                    for (int k = 0; k < 2; k++) {
-                        applicantsGradesArray2[j][k] = Integer.parseInt(applicantsGradesArray1[k]);
-                    }
+        //테스트 갯수만큼 반복
+        for (int i = 0; i < numberOfTests; i++) {
+            //합격자수 초기화 서류심사 1등은 통과기 때문에 초기1 잡아줌
+            int successfulCandidate = 1;
+
+            //각 테스트당 지원자수
+            int numberOfApplicants = Integer.parseInt(bufferedReader.readLine());
+
+            //지원자 성적 배열에 넣기
+            int applicantsGradesArray2[][] = new int[numberOfApplicants][2];
+            for (int j = 0; j < numberOfApplicants; j++) {
+                String[] applicantsGradesArray1 = bufferedReader.readLine().split(" ");
+                for (int k = 0; k < 2; k++) {
+                    applicantsGradesArray2[j][k] = Integer.parseInt(applicantsGradesArray1[k]);
+                }
+            }
+
+            //서류면접 오름차순 정렬
+            Arrays.sort(applicantsGradesArray2, new Comparator<int[]>() {
+                @Override
+                public int compare(int[] o1, int[] o2) {
+                    return o1[0] - o2[0];
+                }
+            });
+
+            //처음 서류1순위의 면접순위값입력
+            int theFirstMumber = applicantsGradesArray2[0][1];
+            //순위비교해서 높으면 합격자에 추가하기
+            for (int h = 1; h < numberOfApplicants; h++) {
+                //만약 서류 1순위 의 면접순위보다 작으면 합격자수 추가하고 퍼스트넘버를 [h][1]값으로 바꾼다.그보다크면 그냥 넘어가기때문에 처음수랑 비교가능
+                if (applicantsGradesArray2[h][1] < theFirstMumber) {
+                    successfulCandidate += 1;
+                    theFirstMumber = applicantsGradesArray2[h][1];
                 }
 
-                //서류면접 오름차순 정렬
-                Arrays.sort(applicantsGradesArray2, new Comparator<int[]>() {
-                    @Override
-                    public int compare(int[] o1, int[] o2) {
-                        if (o1[0] < o2[0]) {
-                            return o1[0] - o2[0];
-                        } else {
-                            return o2[0] - o2[0];
-                        }
-                    }
-                });
-
-                //처음 서류1순위의 면접순위값입력
-                int theFirstMumber = applicantsGradesArray2[0][1];
-                //순위비교해서 높으면 합격자에 추가하기
-                for (int h = 1; h < numberOfApplicants; h++) {
-                    //만약 서류 1순위 의 면접순위보다 작으면 합격자수 추가하고 퍼스트넘버를 [h][1]값으로 바꾼다.그보다크면 그냥 넘어가기때문에 처음수랑 비교가능
-                    if (applicantsGradesArray2[h][1] < theFirstMumber) {
-                        successfulCandidate += 1;
-                        theFirstMumber = applicantsGradesArray2[h][1];
-                    }
-
-                }
-                result[i] = successfulCandidate;
             }
-            //테스트 수에맞게 합격자수 출력하기
-            for (int u = 0; u < result.length; u++) {
-                System.out.println(result[u]);
-            }
+            result[i] = successfulCandidate;
+        }
+        //테스트 수에맞게 합격자수 출력하기
+        for (int u = 0; u < result.length; u++) {
+            System.out.println(result[u]);
         }
     }
+}
