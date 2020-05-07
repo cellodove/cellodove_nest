@@ -1,51 +1,30 @@
-import java.io.*;
+import java.util.Scanner;
 import java.util.Arrays;
-import java.util.StringTokenizer;
+
 
 public class main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
 
-        //입출력 초기화
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+        Scanner sc = new Scanner(System.in);
 
-        //끊긴줄의 갯수
-        int cutString = Integer.parseInt(stringTokenizer.nextToken());
-        //줄브랜드의 갯수
-        int numberOfBrands = Integer.parseInt(stringTokenizer.nextToken());
+        int cutString = sc.nextInt();
+        int numberOfBrands =sc.nextInt();
+        int Min = Integer.MAX_VALUE;
 
-        //브랜드들의 묶음판매와 낱개판매 가격을넣기위한 배열 생성및 입력
-        int[] bundle = new int[numberOfBrands];
         int[] piece = new int[numberOfBrands];
-        for (int i = 0; i < numberOfBrands; i++) {
-            stringTokenizer = new StringTokenizer(bufferedReader.readLine());
-            bundle[i] = Integer.parseInt(stringTokenizer.nextToken());
-            piece[i] = Integer.parseInt(stringTokenizer.nextToken());
-        }
+        
+        int[] bundle = new int[numberOfBrands];
 
-        //묶음판매가격과 낱개판매가격 배열을 오름차순으로 정렬 가장가격이싼 것이 앞으로옴
-        Arrays.sort(bundle);
+        for(int i=0; i<numberOfBrands; i++){
+            bundle[i] = sc.nextInt();
+            piece[i] = sc.nextInt();
+        }
         Arrays.sort(piece);
+        Arrays.sort(bundle);
 
-        //총 줄의 가격을 넣기위한 배열생성
-        int[] stringPrice = new int[numberOfBrands];
+        Min = Math.min(((cutString/6)+1)*bundle[0], cutString*piece[0]);
+        Min = Math.min(Min,((cutString/6))*bundle[0] + (cutString%6)*piece[0]);
 
-        //끊긴줄이 6줄보다 많으면 가장싼 묶음으로 최대한 사고 나머지 남는 줄은 낱개판매중에서 가장싼줄로 사서 두개의 가격을 합친다.
-        if (cutString >= 6) {
-            int bundlePrice = bundle[0] * (cutString / 6);
-            int piecePrice = piece[0] * (cutString % 6);
-            stringPrice[0] = bundlePrice + piecePrice;
-            //끊긴줄이 6줄보다 적으면 가장싼 낱개줄로 다산다.
-        } else {
-            stringPrice[1] = piece[0] * cutString;
-        }
-
-
-        //줄가격의배열을 오름차순 정리한다.
-        Arrays.sort(stringPrice);
-        //가장싼 가격을 출력한다.
-        System.out.println(stringPrice[1]);
-
+        System.out.println(Min);
     }
 }
