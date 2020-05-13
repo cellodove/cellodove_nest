@@ -1,6 +1,6 @@
 package a.b.c.d;
-public class sum{
-	public static void sum(int num1, int num2) {
+public class Sum{
+	public static void Sum(int num1, int num2) {
 	
 	int num3 = num1+num2;
 	
