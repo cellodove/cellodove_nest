@@ -1,0 +1,25 @@
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        //입출력 정의
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        //몇개의 갯수가 들어오면 라인갯수만큼 배열만들기
+        int line = Integer.parseInt(bufferedReader.readLine());
+
+        int[] lineArray = new int[line];
+
+        bufferedReader.close();
+        bufferedWriter.close();
+
+
+
+
+    }
+
+
+
+}
