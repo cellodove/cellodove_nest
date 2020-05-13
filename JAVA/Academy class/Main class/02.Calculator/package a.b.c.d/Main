@@ -1,0 +1,48 @@
+package a.b.c.d;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		
+		//입력 설정
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		
+		//두수 받기
+		System.out.print("두수를 입력하세요.: ");
+		String inputNum = bufferedReader.readLine();
+		
+		//받은 두수를 넣기위한 배열 생성
+		int[] inputNumber = new int[2];
+		
+		//아까받은 두수 나누어서 스트링배열에 저장
+		String[] inputNum1 = inputNum.split(" ");
+		
+		//스트링배열에있는 수를 정수형배열에 다시 저장
+		inputNumber[0] = Integer.parseInt(inputNum1[0]);
+		inputNumber[1] = Integer.parseInt(inputNum1[1]);
+		
+		//연산자 선택후 입력받기
+		System.out.print("연산자를 선택하세요 + - * / :");
+		String Operator = bufferedReader.readLine();
+
+		//연산자에따라 계산후 출력
+		if(Operator=="+") {
+			sum.sum(inputNumber[0], inputNumber[1]);
+			
+		}else if(Operator=="-") {
+			
+			Minus.Minus(inputNumber[0], inputNumber[1]);
+		}else if(Operator=="*") {
+			
+			Multiplication.Multiplication(inputNumber[0], inputNumber[1]);
+		}else if(Operator=="/") {
+		
+			Divide.Divide(inputNumber[0], inputNumber[1]);
+		}
+	}
+
+}
