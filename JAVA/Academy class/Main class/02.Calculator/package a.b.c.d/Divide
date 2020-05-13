@@ -7,7 +7,6 @@ public class Divide {
 		int num3 = num1/num2;
 		
 		System.out.printf("두수의나누기는: %d 입니다." , num3);
-		System.out.println(num3);
 		
 		
 	}
