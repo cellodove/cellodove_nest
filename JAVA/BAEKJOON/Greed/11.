@@ -5,21 +5,40 @@ public class Main {
 
         //입출력 정의
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+
 
         //몇개의 갯수가 들어오면 라인갯수만큼 배열만들기
         int line = Integer.parseInt(bufferedReader.readLine());
 
-        int[] lineArray = new int[line];
+        //라인배열에 숫자넣기
+        String[] lineArray = bufferedReader.readLine().split(" ");
+        int[] lineNumber = new int[line];
+
+        for (int i = 0; i < line; i++) {
+
+            lineNumber[i] = Integer.parseInt(lineArray[i]);
+        }
+
+        int[] count = new int[line];
+        for (int j = 0; j < lineNumber.length; j++) {
+            for (int k = 1; k < lineNumber.length; k++) {
+                if()
+            }
+
+
+        }
+
+
+        //테스트용
+        for (int i = 0; i < lineNumber.length; i++) {
+            System.out.print(lineNumber[i] + " ");
+        }
+
 
         bufferedReader.close();
-        bufferedWriter.close();
-
-
 
 
     }
-
 
 
 }
