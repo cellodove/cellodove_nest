@@ -1,0 +1,68 @@
+package A2020_05_15;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		//스캔입력 설정
+		Scanner scanner = new Scanner(System.in);
+		
+		//메뉴입력
+		System.out.print("1.한식, 2.양식, 3.중식 중 메뉴를 고르세요(번호):");
+		char foodCountry = (char) System.in.read();
+
+		
+		//나라음식 종류 선택하기
+		switch (foodCountry) {
+		case '1':
+			System.out.println(" ");
+			System.out.println("한식을 선택하셨습니다.");
+
+			break;
+
+		case '2':
+			System.out.println(" ");
+			System.out.println("양식을 선택하셨습니다.");
+
+			break;
+
+		case '3':
+			System.out.println(" ");
+			System.out.println("중식을 선택하셨습니다.");
+
+
+			break;
+
+		default:
+			System.out.println("없는 번호입니다.");
+
+			break;
+		}
+
+		//각 나라별 음식 메뉴 고르기
+		char foodNumber;
+		if (foodCountry == '1') {
+			System.out.print("1.비빔밥, 2.김치찌개, 3.참치김밥, 4.된장찌개,  5.돼지국밥,  6.수육  중 메뉴를 고르세요(번호): ");
+			foodNumber = scanner.next().charAt(0);
+			System.out.println(" ");
+			Korean.koreanFood(foodNumber);
+
+		} else if (foodCountry == '2') {
+			System.out.print("1.쇠고기 스튜, 2.스테이크, 3.스파케티, 4.크림파스타, 5.피자, 6.샐러드  중 메뉴를 고르세요(번호): ");
+			foodNumber = foodNumber = scanner.next().charAt(0);
+			System.out.println(" ");
+			Western.westernFood(foodNumber);
+
+		} else if (foodCountry == '3') {
+			System.out.print("1.짜장면, 2.짬뽕, 3.볶음밥,  4.탕수육, 5.칠리세우  중 메뉴를 고르세요(번호): ");
+			foodNumber = foodNumber = scanner.next().charAt(0);
+			System.out.println(" ");
+			Chinese.chineseFood(foodNumber);
+
+		}
+
+	}
+
+}
