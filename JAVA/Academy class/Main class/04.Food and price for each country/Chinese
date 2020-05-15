@@ -1,0 +1,39 @@
+package A2020_05_15;
+
+public class Chinese {
+	public static void chineseFood(char foodNumber) {
+
+		switch (foodNumber) {
+		case '1':
+			System.out.println("짜장면 가격: 3000원");
+
+			break;
+
+		case '2':
+			System.out.println("짬뽕 가격: 4000원");
+
+			break;
+
+		case '3':
+			System.out.println("볶음밥 가격: 4000원");
+
+			break;
+
+		case '4':
+			System.out.println("탕수육 가격: 13,000원");
+
+			break;
+
+		case '5':
+			System.out.println("칠리세우 가격: 14,000원");
+
+			break;
+
+		default:
+			System.out.println("없는 번호입니다.");
+			break;
+		}
+
+	}
+
+}
