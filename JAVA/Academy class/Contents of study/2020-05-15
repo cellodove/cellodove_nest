@@ -44,6 +44,15 @@ String 초기화는 null
 new를 사용하면 static 
 
 
+메소드와 클래스를 구별하자
+메소느는 함수와같다. 그렇기에 메소드 작성시 값을 입력해야한다.
+EX)public static void ABCD (int x, int y)
+
+클래스는 클래스이기때문에 그냥 클래스다
+EX)public class ABCD
+
+
+
 
 
 
