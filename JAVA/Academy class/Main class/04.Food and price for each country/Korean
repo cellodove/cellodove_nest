@@ -1,0 +1,44 @@
+package A2020_05_15;
+
+public class Korean {
+
+	public static void koreanFood(char foodNumber) {
+
+		switch (foodNumber) {
+		case '1':
+			System.out.println("비빔밥 가격: 4500원");
+
+			break;
+
+		case '2':
+			System.out.println("김치찌개 가격: 5000원");
+
+			break;
+
+		case '3':
+			System.out.println("참치김밥 가격: 3000원");
+
+			break;
+
+		case '4':
+			System.out.println("된장찌개 가격: 5000");
+
+			break;
+
+		case '5':
+			System.out.println("돼지국밥 가격: 5000원");
+
+			break;
+			
+		case '6':
+			System.out.println("수육 가격: 15,000원");
+
+			break;
+			
+		default:
+			System.out.println("없는 번호입니다.");
+			break;
+		}
+
+	}
+}
