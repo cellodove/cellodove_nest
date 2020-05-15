@@ -1,0 +1,46 @@
+package A2020_05_15;
+
+public class Western {
+	
+	public static void westernFood(char foodNumber) {
+
+		switch (foodNumber) {
+		case '1':
+			System.out.println("쇠고기 스튜 가격: 4000원");
+
+			break;
+
+		case '2':
+			System.out.println("스테이크 가격: 20,000원");
+
+			break;
+
+		case '3':
+			System.out.println("스파케티 가격: 5000원");
+
+			break;
+
+		case '4':
+			System.out.println("크림파스타 가격: 5000");
+
+			break;
+
+		case '5':
+			System.out.println("피자 가격: 13,000원");
+
+			break;
+			
+		case '6':
+			System.out.println("샐러드 가격: 6,000원");
+
+			break;
+			
+		default:
+			System.out.println("없는 번호입니다.");
+			break;
+		}
+
+	}
+	
+
+}
