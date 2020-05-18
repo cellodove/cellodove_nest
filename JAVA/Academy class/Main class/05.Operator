@@ -9,7 +9,7 @@ public class Main {
 		int b = 2;
 		System.out.println("a=5 , b=2 ");
 		System.out.println("");
-		
+
 		int sum = a + b;
 		System.out.println("a+b = " + sum);
 
@@ -24,6 +24,7 @@ public class Main {
 
 		int mod = a % b;
 		System.out.println("a%b = " + mod);
+		System.out.println("");
 		//////////////////////////
 
 		System.out.println("a>B = " + (a > b));
@@ -39,30 +40,70 @@ public class Main {
 		System.out.println("a!=b = " + (a != b));
 
 		System.out.println("a instanceof b = " + (null instanceof String));
+		System.out.println("");
 		////////////////////////////////////////
 
-		System.out.println("a == 5 & b == 2 = "+ (a == 5 & b == 2));
+		System.out.println("a == 5 & b == 2 = " + (a == 5 & b == 2));
 
-		System.out.println("a == 5 && b ==7 = "+ (a == 5 && b == 7));
+		System.out.println("a == 5 && b ==7 = " + (a == 5 && b == 7));
 
 		System.out.println("a == 9 | b == 4 = " + (a == 9 | b == 4));
 
-		System.out.println("a == 5 || b == 4 = "+(a == 5 || b == 4));
+		System.out.println("a == 5 || b == 4 = " + (a == 5 || b == 4));
 
 		boolean c = true;
 		System.out.println(!c);
+		System.out.println("");
+		//////////////////////////////////////
 
 		a += b;
-		System.out.println("a += b = "+a);
+		System.out.println("a += b = " + a);
 		a -= b;
-		System.out.println("a -= b = "+a);
+		System.out.println("a -= b = " + a);
 		a *= b;
-		System.out.println("a *= b = "+a);
+		System.out.println("a *= b = " + a);
 		a /= b;
-		System.out.println("a /= b = "+a);
+		System.out.println("a /= b = " + a);
 		a %= b;
-		System.out.println("a %= b = "+ a);
+		System.out.println("a %= b = " + a);
+		System.out.println("");
 		////////////////////////////////
+
+		System.out.println("a & b = " + (10 & 12));
+
+		System.out.println("a | b = " + (10 | 12));
+
+		System.out.println("a ^ b = " + (10 ^ 12));
+
+		System.out.println("a ~= " + (~3));
+
+		System.out.println("");
+		////////////////////////////////////
+
+		System.out.println("a << b = " + (4 << 2));
+
+		System.out.println("a >> b = " + (4 >> 2));
+		System.out.println("");
+		//////////////////////////////////
+
+		System.out.println("++a = " + (++a));
+
+		System.out.println("--a = " + (--a));
+		System.out.println("");
+		////////////////////
+
+		System.out.println("(a > b) ? a : b = " + ((a > b) ? a : b));
+		System.out.println("");
+		//////////////////////////
+
+		int i = 3;
+		int j = 3;
+
+		String string1 = "나의 나이는 ";
+		String string2 = "살입니다. ";
+		
+		System.out.println("string1+i+j+string2 = "+(string1+i+j+string2));
+		
 
 	}
 
