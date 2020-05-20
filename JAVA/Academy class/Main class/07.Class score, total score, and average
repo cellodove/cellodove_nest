@@ -1,0 +1,45 @@
+package a2020_05_20;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+		int korean,math,english,total,average;
+		
+		do {
+			System.out.print("국어 점수를 입력하세요: ");
+			korean = Integer.parseInt(bufferedReader.readLine());
+		}while(korean>100|korean<0);
+		
+		
+		do {
+			System.out.print("수학점수를 입력하세요: ");
+			math = Integer.parseInt(bufferedReader.readLine());
+		}while(math>100|math<0);
+			
+		do {
+			System.out.print("영어점수를 입력하세요: ");
+			english = Integer.parseInt(bufferedReader.readLine());
+		}while(english>100|english<0);
+		
+		total=korean+math+english;
+		average = total/3;
+		
+		System.out.printf("국어점수:%d  \n",korean);
+		System.out.printf("수학점수:%d  \n",math);
+		System.out.printf("영어점수:%d  \n",english);
+		System.out.println(" ");
+		System.out.printf("총점 :%d  \n",total);
+		System.out.printf("평균:%d  \n",average);
+		
+		bufferedReader.close();
+
+	}
+
+}
