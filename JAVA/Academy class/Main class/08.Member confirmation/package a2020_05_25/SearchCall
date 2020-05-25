@@ -1,0 +1,29 @@
+package a2020_05_25;
+
+import java.util.Scanner;
+
+public class SearchCall {
+
+	static Scanner scanner;
+	public static void main(String[] args) {
+		SearchService searchService = new SearchService();
+		scanner = new Scanner(System.in);
+		
+		
+		do {
+			System.out.println("검색할 이름");
+			String name = scanner.next();
+			
+			boolean searchResult = searchService.searchMember(name);
+			
+			if(searchResult) {
+				break;
+			}
+		System.out.println("해당 회원이 없습니다.");
+			
+		}while(true);
+		
+		
+		
+	}
+}
