@@ -1,0 +1,36 @@
+package a2020_05_25;
+
+
+public class SearchService {
+
+	SearchCommand[] searchCommands = new SearchCommand[2];
+	
+	public SearchService() {
+		searchCommands[0]=new SearchCommand("홍길동", 33);
+		searchCommands[1]=new SearchCommand("제임스", 29);
+	}
+	
+	boolean searchMember(String name) {
+		
+		boolean searchResult = false;
+		
+		for(int i= 0; i<searchCommands.length; i++) {
+			if(searchCommands[i].getName().equals(name)) {
+				
+				SearchInfo.printInfo(searchCommands[i]);
+				searchResult = true;
+				
+				
+			}
+			
+			
+			
+		}
+		
+		return searchResult;
+		
+	}
+	
+	
+	
+}
