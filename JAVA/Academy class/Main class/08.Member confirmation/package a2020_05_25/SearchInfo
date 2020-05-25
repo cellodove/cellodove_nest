@@ -1,0 +1,10 @@
+package a2020_05_25;
+
+public class SearchInfo {
+
+	public static void printInfo(SearchCommand searchCommand) {
+		System.out.println(searchCommand.getName()+"회원의 정보");
+		System.out.println("이름"+searchCommand.getName());
+		System.out.println("나이"+searchCommand.getAge());
+	}
+}
