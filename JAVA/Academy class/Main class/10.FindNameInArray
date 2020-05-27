@@ -1,0 +1,41 @@
+package a2020_05_27;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class FindNameInArray {
+	
+	//이름데이터 설정
+	static String[] nameArray = { "홍길동", "전우치", "임꺽정" };
+
+	public static void main(String[] args) throws IOException {
+		//입력 설정
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		String nameInput;
+		int indexNumber = -1;
+
+		System.out.print("이름을 입력하세요:");
+
+		do {
+
+			nameInput = bufferedReader.readLine();
+			for (int i = 0; i < nameArray.length; i++) {
+
+				if (nameInput.equals(nameArray[i])) {
+					indexNumber = i;
+				}
+			}
+
+			if (indexNumber == -1) {
+				System.out.println("그런 이름은 없습니다.");
+			} else {
+				System.out.println(nameInput + "의 인덱스 번호는" + indexNumber + "입니다.");
+				break;
+			}
+
+			System.out.print("다시 입력해 주세요:");
+
+		} while (true);
+	}
+}
