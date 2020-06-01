@@ -1,0 +1,27 @@
+package a2020_06_01;
+
+class UserException extends Exception {
+	
+	private static final long serialVersionUID = 1L;
+
+	public UserException(String mesg) {
+		
+		super(mesg);
+	}
+}
+
+public class UserDefined {
+	public static void userEx(int num) throws UserException {
+		if (num < 100) {
+			throw new UserException("num 값이 100보다 작다");
+		}
+	}
+
+	public static void main(String[] args) {
+		try {
+			userEx(70);
+		} catch (UserException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}
