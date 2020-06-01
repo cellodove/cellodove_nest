@@ -1,0 +1,23 @@
+package a2020_06_01;
+
+public class ComplileCheckedUnChecked {
+	
+	public void nameA() {
+		
+		
+	}
+	public void nameB() {
+		throw new NullPointerException();
+	}
+	
+	
+	public static void main(String[] args) throws ClassNotFoundException {
+		
+		ComplileCheckedUnChecked complileCheckedUnChecked= new ComplileCheckedUnChecked ();
+		complileCheckedUnChecked.nameA();
+		complileCheckedUnChecked.nameB();
+		
+	}
+	
+
+}
