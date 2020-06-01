@@ -1,0 +1,28 @@
+package a2020_06_01;
+
+public class MultiException {
+
+	static int num;
+	static String name;
+
+	public static void main(String[] args) {
+		name = null;
+
+		try {
+
+			num = 3 / 0;
+			System.out.println("문자열의 길이: " + name.length());
+		} catch (NullPointerException nullPointerException) {
+			System.out.println(nullPointerException.getMessage());
+
+		} catch (ArithmeticException arithmeticException) {
+			System.out.println(arithmeticException.getMessage());
+
+		} catch (Exception exception) {
+			System.out.println("모든 예외처리 가능");
+
+		}
+
+	}
+
+}
