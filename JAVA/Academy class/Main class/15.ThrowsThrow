@@ -1,0 +1,18 @@
+package a2020_06_01;
+
+public class ThrowsThrow {
+
+	public static void thro(int num) throws Exception {
+		if (num<100) {
+			throw new Exception("num값이 100보다 작다.");
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) throws Exception {
+		thro(99);
+		
+	}
+	
+}
