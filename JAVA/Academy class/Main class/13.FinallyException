@@ -1,0 +1,23 @@
+package a2020_06_01;
+
+public class FinallyException {
+
+	static int num;
+
+	public static void main(String[] args) {
+		try {
+
+			num = 3 / 0;
+			System.out.println("int형 출력: " + num);
+
+		} catch (ArithmeticException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+
+		} finally {
+			System.out.println("예외처리와 관계없이 실행한다.");
+		}
+
+	}
+
+}
