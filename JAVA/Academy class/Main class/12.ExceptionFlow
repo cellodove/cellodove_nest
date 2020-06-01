@@ -1,0 +1,19 @@
+package a2020_06_01;
+
+public class ExceptionFlow {
+
+	static int num;
+
+	public static void main(String[] args) {
+		try {
+			num = 3 / 0;
+			System.out.println("int형 자료형 출력: " + num);
+		} catch (ArithmeticException e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+
+		}
+
+	}
+
+}
