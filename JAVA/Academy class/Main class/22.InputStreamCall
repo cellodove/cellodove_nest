@@ -1,0 +1,23 @@
+package a2020_06_02;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class InputStreamCall {
+	
+	public static void main(String[] args) throws IOException {
+		byte[] b = new byte[5];
+		System.out.println("영문을 입력하세요: ");
+		
+		InputStream inputStream = System.in;
+		inputStream.read(b);
+		for(byte c:b) {
+			System.out.println("입력값: "+(char)c);
+			inputStream.close();
+			
+		}
+		
+		
+	}
+
+}
