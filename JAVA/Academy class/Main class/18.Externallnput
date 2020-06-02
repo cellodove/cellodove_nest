@@ -1,0 +1,30 @@
+package a2020_06_02;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Externallnput {
+
+	public static void main(String[] args) throws IOException {
+		byte[] b = new byte[5];
+		System.out.println("숫자입력:");
+		
+		
+		InputStream inputStream = System.in;
+		//System.out.println(inputStream);
+		//inputStream.read(b);
+		//System.out.println("너는 어디있니"+inputStream.read(b));
+		
+		for(byte c:b) {
+			System.out.println(c);
+		}
+		
+		
+		
+		
+		int num = inputStream.read();
+		System.out.println("입력값:" + (char) num);
+		inputStream.close();
+	}
+
+}
