@@ -1,0 +1,23 @@
+package a2020_06_02;
+
+import java.io.File;
+
+public class CreateFile {
+
+	public static void main(String[] args) {
+		File file = null;
+		boolean bool = false;
+		try {
+			file = new File("C:\\javaio", "min.txt");
+
+			bool = file.createNewFile();
+
+			System.out.println("javaio 폴더에서 test 텍스트 파일 생성 여부:" + bool);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+	}
+
+}
