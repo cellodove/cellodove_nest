@@ -1,0 +1,25 @@
+package a2020_06_02;
+
+import java.io.File;
+
+public class FileList {
+	public static void main(String[] args) {
+
+		File file = new File("C:\\javaio");
+
+		File[] files = file.listFiles();
+
+		for (int i = 0, j = 0; i < files.length; i++) {
+			if (files[i].getName().endsWith(".txt"))
+				;
+			{
+				
+				System.out.println(j++ + 1 + ":" + files[i].getName());
+
+			}
+
+		}
+
+	}
+
+}
