@@ -1,0 +1,33 @@
+package a2020_06_03;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+public class HtmlSouce {
+	public static void main(String[] args) {
+		try {
+
+			URL url = new URL("https://www.monsterinsights.com");
+
+			InputStream inputStream = url.openStream();
+			InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+
+			BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+			String string = bufferedReader.readLine();
+			while (string != null) {
+				System.out.println(string);
+				string = bufferedReader.readLine();
+			}
+			bufferedReader.close();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+	}
+
+}
