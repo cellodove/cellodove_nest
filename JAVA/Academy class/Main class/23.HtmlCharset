@@ -1,0 +1,34 @@
+package a2020_06_03;
+
+import java.io.*;
+import java.net.URL;
+
+public class HtmlCharset {
+	public static void main(String[] args) {
+		InputStream inputStream = null;
+		InputStreamReader inputStreamReader = null;
+		BufferedReader bufferedReader = null;
+		try {
+			URL url = new URL("https://www.naver.com/");
+			inputStream = url.openStream();
+			
+			inputStreamReader = new InputStreamReader(inputStream, "EUC-KR");
+			bufferedReader = new BufferedReader(inputStreamReader);
+			String string = "";
+			while ((string = bufferedReader.readLine()) != null) {
+				System.out.println(string);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			try {
+				inputStream.close();
+				inputStreamReader.close();
+				bufferedReader.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
