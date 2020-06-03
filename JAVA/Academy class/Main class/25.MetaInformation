@@ -1,0 +1,26 @@
+package a2020_06_03;
+
+import java.net.URL;
+
+public class MetaInformation {
+	public static void main(String[] args) {
+		try {
+
+			URL url = new URL("https://www.naer.com/index.html");
+
+			System.out.println("프로토콜" + url.getProtocol());
+
+			System.out.println("호스트" + url.getHost());
+
+			System.out.println("디폴트포 트" + url.getDefaultPort());
+
+			System.out.println("기본 파일명" + url.getFile());
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+	}
+
+}
