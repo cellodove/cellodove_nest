@@ -1,0 +1,43 @@
+package a2020_06_04;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Client {
+	private static ServerSocket serverSocket;
+
+	public static void main(String[] args) {
+
+		try {
+			// 포트를 지정한다.
+			serverSocket = new ServerSocket(5455);
+		} catch (IOException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+		while (true) {
+			try {
+				Socket socket = serverSocket.accept();
+
+				OutputStream outputStream = socket.getOutputStream();
+				ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
+				objectOutputStream.writeObject("서버와 통신이 이루어졌습니다.");
+				objectOutputStream.close();
+				socket.close();
+
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+
+		}
+
+	}
+
+}
