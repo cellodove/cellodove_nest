@@ -1,0 +1,38 @@
+package a2020_06_04;
+
+import java.io.*;
+import java.net.*;
+
+public class ChatServer extends Thread {
+	private static ServerSocket serverSocket;
+
+	public static void main(String[] args) throws Exception {
+// 포트를 지정한다.
+		serverSocket = new ServerSocket(5477);
+		System.out.println("접속 대기중...");
+// 요청을 수락한다.
+		Socket socket = serverSocket.accept();
+		InputStreamReader inputStreamReader1 = new InputStreamReader(System.in);
+		BufferedReader keyRead = new BufferedReader(inputStreamReader1);
+// 출력 스트림을 호출한다.
+		OutputStream outputStream = socket.getOutputStream();
+// 인쇄 형식으로 쓴다.
+		PrintWriter printWriter = new PrintWriter(outputStream);
+// 입력 스트림을 호출한다.
+		InputStream inputStream = socket.getInputStream();
+		InputStreamReader inputStreamReader2 = new InputStreamReader(inputStream);
+		BufferedReader receiveRead = new BufferedReader(inputStreamReader2);
+		String receiveMessage = "";
+		String sendMessage = "";
+// 메시지를 반복한다.
+		while (true) {
+			if ((receiveMessage = receiveRead.readLine()) != null) {
+				System.out.println(receiveMessage);
+			}
+			sendMessage = keyRead.readLine();
+			printWriter.println(sendMessage);
+// 스트림을 비운다.
+			printWriter.flush();
+		}
+	}
+}
