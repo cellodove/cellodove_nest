@@ -1,0 +1,38 @@
+package a2020_06_04;
+
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		try {
+			ServerSocket serverSocket = new ServerSocket(5433);
+			//System.out.println(serverSocket);
+			while(true) {
+				
+				Socket socket = serverSocket.accept();
+				OutputStream outputStream = socket.getOutputStream();
+				//System.out.println(outputStream);
+				
+				ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
+				objectOutputStream.writeObject("서버와 통신");
+				serverSocket.close();
+				socket.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+		
+		
+		
+		
+		
+	}
+
+}
