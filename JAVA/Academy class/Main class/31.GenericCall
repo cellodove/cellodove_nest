@@ -1,0 +1,16 @@
+package a2020_06_08;
+
+import java.util.ArrayList;
+
+public class GenericCall {
+	public static void main(String[] args) {
+
+		GenericCommand genericCommand = new GenericCommand("홍길동");
+
+		ArrayList<GenericCommand> arrayList = new ArrayList<GenericCommand>();
+		arrayList.add(genericCommand);
+		System.out.println(genericCommand);
+
+	}
+
+}
