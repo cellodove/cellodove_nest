@@ -1,0 +1,16 @@
+package a2020_06_08;
+
+public class GenericCommand {
+	private String name;
+
+	public GenericCommand(String name) {
+		super();
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "GenericCommand [name=" + name + "]";
+	}
+
+}
