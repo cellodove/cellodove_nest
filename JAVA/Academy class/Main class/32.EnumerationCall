@@ -1,0 +1,26 @@
+package a2020_06_08;
+
+import java.util.Enumeration;
+import java.util.Vector;
+
+public class EnumerationCall {
+	public static void main(String[] args) {
+		EnumerationCommand command1 = new EnumerationCommand();
+		command1.setName("홍길동");
+
+		EnumerationCommand command2 = new EnumerationCommand();
+		command2.setName("전우치");
+		Vector<EnumerationCommand> vector = new Vector<EnumerationCommand>();
+		vector.add(command1);
+		vector.add(command2);
+		Enumeration<EnumerationCommand> enumeration = vector.elements();
+		while (enumeration.hasMoreElements()) {
+
+			EnumerationCommand command3 = enumeration.nextElement();
+			String name = command3.getName();
+			System.out.println(name);
+		}
+
+	}
+
+}
