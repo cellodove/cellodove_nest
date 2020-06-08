@@ -1,0 +1,24 @@
+package a2020_06_08;
+
+import java.util.Enumeration;
+import java.util.Vector;
+
+public class WhileEnumeration {
+	public static void main(String[] args) {
+		Vector<String> vector = new Vector<String>();
+		vector.addElement("java");
+		vector.addElement("JSP");
+		vector.addElement("Spring");
+		System.out.println("Vector 요소들은 다음과 같다.");
+		for (int i = 0; i < vector.size(); i++) {
+			System.out.println("vector의 " + i + "번째 요소 : " + vector.elementAt(i));
+		}
+		Enumeration<String> enumeration = vector.elements();
+		System.out.println("Vector로부터 생성한 Enumeration의 요소들");
+		while (enumeration.hasMoreElements()) {
+			System.out.println("en의 요소 : " + enumeration.nextElement());
+		}
+
+	}
+
+}
