@@ -1,0 +1,23 @@
+package a2020_06_08;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class CollectionFor {
+	public static void main(String[] args) {
+
+		ArrayList<String> arrayList = new ArrayList<String>();
+		arrayList.add("java");
+		arrayList.add("JSP");
+		arrayList.add("Spring");
+
+		for (Iterator<String> iterator = arrayList.iterator(); iterator.hasNext();) {
+
+			String string = iterator.next();
+			System.out.println(string);
+
+		}
+
+	}
+
+}
