@@ -1,0 +1,11 @@
+package a2020_06_09;
+
+public class LocalVariableUsingCall {
+
+	public static void main(String[] args) {
+		LocalVariableUsing localVariableUsing = new LocalVariableUsing();
+		localVariableUsing.call(20);
+
+	}
+
+}
