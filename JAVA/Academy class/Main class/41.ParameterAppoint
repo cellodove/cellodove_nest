@@ -1,0 +1,6 @@
+package a2020_06_09;
+
+public interface ParameterAppoint {
+	public int call(int a);
+
+}
