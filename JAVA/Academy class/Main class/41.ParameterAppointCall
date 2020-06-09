@@ -1,0 +1,13 @@
+package a2020_06_09;
+
+public class ParameterAppointCall {
+
+	public static void main(String[] args) {
+		ParameterAppoint lambad = a -> {
+			System.out.println("매개변수 호출:"+a);;
+			return a;
+			
+		};
+		lambad.call(4);
+	}
+}
