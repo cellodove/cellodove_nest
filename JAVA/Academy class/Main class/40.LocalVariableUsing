@@ -1,0 +1,13 @@
+package a2020_06_09;
+
+public class LocalVariableUsing {
+	void call(int i) {
+		int localvar = 40;
+		LocalVariableInterface localVariableInterface = () -> {
+			System.out.println("매개변수 값:" + i);
+			System.out.println("로컬변수 값: " + localvar);
+		};
+		localVariableInterface.call();
+	}
+
+}
