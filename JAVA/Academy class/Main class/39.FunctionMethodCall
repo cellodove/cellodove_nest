@@ -1,0 +1,15 @@
+package a2020_06_09;
+
+public class FunctionMethodCall {
+	public static void main(String[] args) {
+		FunctionMethod functionMethod;
+		
+		functionMethod=() -> {
+			String str="람다식";
+			System.out.println(str);
+		};
+		functionMethod.call();
+		
+	}
+
+}
