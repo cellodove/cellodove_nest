@@ -1,0 +1,20 @@
+package a2020_06_09;
+
+public class ThisUsing {
+	class Inner {
+		int innerField = 20;
+
+		void call() {
+			ThisInterface thisInterface = () -> {
+				System.out.println("내부 필드:" + innerField);
+
+				System.out.println("this 접근의 내부 필드:" + this.innerField);
+
+			};
+			thisInterface.call();
+
+		}
+
+	}
+
+}
