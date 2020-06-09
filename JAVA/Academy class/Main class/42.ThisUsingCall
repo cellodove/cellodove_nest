@@ -1,0 +1,13 @@
+package a2020_06_09;
+
+public class ThisUsingCall {
+	public static void main(String[] args) {
+		ThisUsing thisUsing = new ThisUsing();
+
+		ThisUsing.Inner inner = thisUsing.new Inner();
+
+		inner.call();
+
+	}
+
+}
