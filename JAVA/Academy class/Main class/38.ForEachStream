@@ -1,0 +1,20 @@
+package a2020_06_09;
+
+import java.util.ArrayList;
+
+public class ForEachStream {
+	public static void main(String[] args) {
+		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+
+		for (int i = 1; i < 10; i++)
+			arrayList.add(i);
+
+		arrayList.forEach(i -> {
+
+			System.out.println(i);
+
+		});
+
+	}
+
+}
