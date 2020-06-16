@@ -105,6 +105,48 @@ print var_ename;
 print var_sal;
 print var_job;
 ----------------------------------
+create or replace procedure dept_insert(
+vdeptno in dept.deptno%type,
+vdname in dept.dname%type,
+vloc in dept.loc%type)
+is
+begin
+insert into dept values(vdeptno, vdname, vloc);
+end;
+--------------------------------------
+execute dept_insert(50, '기획실','서울');
+select * from dept;
+--------------------------------------
+create or replace procedure dept_update(
+vdeptno in dept.deptno%type,
+vdname in dept.dname%type,
+vloc in dept.loc%type)
+is
+begin
+    update dept set deptno=vdeptno,dname=vdname,loc=vloc
+where deptno=vdeptno;
+end;
+-------------------------------
+execute dept_update(50,'기획실','부산');
+select * from dept;
+---------------------------------
+create or replace procedure dept_delete(
+vdeptno in dept.deptno%type)
+is
+begin
+delete from dept where deptno = vdeptno;
+end;
+---------------------------------
+execute dept_delete(50);
+select * from dept;
+---------------------------------
+
+
+
+
+
+
+
 
 
 
