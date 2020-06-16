@@ -1,0 +1,52 @@
+-----------------------------------------
+set serveroutput on;
+declare
+    num number :=1;
+begin
+    loop
+        dbms_output.put_line(num);
+        num := num+1;
+        if(num>3)then
+            exit; --자바의 break;와 같다.
+        end if;
+    end loop;
+end;
+--------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
