@@ -1,0 +1,34 @@
+package kim.a.connection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class ConnectionA {
+	public static void main(String[] args) {
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@192.168.0.131:1521:xe";
+		String userid = "scott";
+		String passwd = "tiger";
+		
+		Connection connection  = null;
+		
+		try {
+			Class.forName(driver);
+			connection = DriverManager.getConnection(url, userid, passwd);
+			System.out.println("데이터베이스와 연결되었습니다.");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally {
+			try {
+				connection.close();
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+			
+		}
+		
+	}
+
+}
