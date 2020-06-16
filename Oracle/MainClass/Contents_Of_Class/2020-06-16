@@ -140,7 +140,22 @@ end;
 execute dept_delete(50);
 select * from dept;
 ---------------------------------
-
+create or replace function cal_bonus(
+minempno in emp.empno%type)
+    return number
+is
+    minsal number(7,2);
+begin
+    select sal into minsal
+    from emp
+    where empno = minempno;
+    return(minsal*200);
+end;
+--------------------------------
+variable var_res number;
+execute :var_res:=cal_bonus(7369);
+print var_res;
+--------------------------------
 
 
 
