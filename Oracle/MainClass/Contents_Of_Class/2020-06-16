@@ -67,8 +67,44 @@ end;
 -------------------------------
 execute del_ename('s%');
 -------------------------------
+create or replace procedure dept_select (
+vdeptno in dept.deptno%type,
+vdname out dept.dname%type,
+vloc out dept.loc%type)
+is
+begin
+select dname,loc into vdname,vloc from dept
+where deptno=vdeptno;
+end;
+--------------------------------
+variable vdname varchar2(30);
+variable vloc varchar2(30);
 
+execute dept_select(40,:vdname,:vloc);
+print vdname;
+print vloc;
+-------------------------------
+create or replace PROCEDURE sel_empno(
+minempno in emp.empno%type,
+minename out emp.ename%type,
+minsal out emp.sal%type,
+minjob out emp.job%type)
+is
+begin
+    select ename, sal, job into minename, minsal, minjob
+    from emp
+    where empno=minempno;
+end;
+-----------------------------------
+variable var_ename varchar2(15);
+variable var_sal number;
+variable var_job varchar2(9);
+EXECUTE sel_empno(7369,:var_ename,:var_sal,:var_job);
 
+print var_ename;
+print var_sal;
+print var_job;
+----------------------------------
 
 
 
