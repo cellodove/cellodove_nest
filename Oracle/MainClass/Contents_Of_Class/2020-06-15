@@ -1,1 +1,76 @@
 
+select empno, ename, sal, dept.deptno
+from emp, dept
+where emp.deptno = dept.deptno;
+
+select e.empno, e.ename, e.sal, d.deptno, d.dname
+from emp e, dept d
+where e.deptno = d.deptno;
+
+select e.empno, e.ename, e.sal, d.deptno, d.dname
+from emp e, dept d
+where e.deptno = d.deptno and e.comm is not null;
+
+select e.ename, e.job, d.loc
+from emp e, dept d
+where e.deptno = d.deptno and e.ename like '%A%';
+
+select e.empno, e.ename, e.job, e.sal, s.grade
+from salgrade s, emp e
+where e.sal between s.losal and s.hisal and e.deptno = 10;
+
+select employee.ename as 사원명, manager.ename as 관리자명
+from emp employee, emp manager
+where employee.mgr = manager.empno;
+
+
+select employee.ename as 사원명, manager.ename as 관리자명
+from emp employee, emp manager
+where employee.mgr = manager.empno(+);
+
+
+select dname from dept
+where deptno = (select deptno from emp where ename = 'SMITH');
+
+
+select empno, ename, job, sal from emp
+where sal > (select sal from emp where empno = 7698);
+
+
+select empno, ename, job, sal from emp
+where sal < (select sal from emp where empno = 7698);
+
+
+select deptno, min(sal) from emp
+group by deptno
+having min(sal) > (select min(sal) from emp where deptno = 20);
+
+
+select rownum, ename from (select * from emp order by empno)
+where rownum <= 10;
+
+
+select * from (select rownum num, ename from emp order by empno)
+where num <= 10;
+
+select * from (select row_number( ) over(order by empno) as num, ename from emp)
+where num <= 10;
+
+
+select ename, sal, deptno from emp
+where sal in (select sal from emp where deptno > 20);
+
+
+select ename, sal, deptno from emp
+where sal > any (select sal from emp where deptno = 30);
+
+
+select ename, sal, deptno from emp
+where sal > all (select sal from emp where deptno = 30);
+
+
+
+
+
+
+
