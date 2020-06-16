@@ -12,6 +12,65 @@ begin
     end loop;
 end;
 --------------------------------------------
+set serveroutput on;
+DECLARE
+begin
+    for num in 1..5 loop
+        dbms_output.put_line(num);
+    end loop;
+end;
+--------------------------------------------
+
+set serveroutput on;
+declare
+    num number := 1;
+begin
+    while(num<=10) loop
+        dbms_output.put_line(num);
+        num:=num+1;
+    end loop;
+end;
+--------------------------------------------
+--------------------------------
+create table empcopy
+as
+select * from emp;
+
+SELECT
+    *
+FROM empcopy;
+--------------------------------
+--일종의 메소드
+create or replace procedure del_all
+is
+begin
+    delete from empcopy;
+    commit;
+end;
+
+execute del_all;
+-------------------------------
+desc user_source;
+
+select name, type, line, text from user_source;
+--------------------------------
+create table empcopy2
+as
+select * from emp;
+-----------------------------
+create or REPLACE PROCEDURE del_ename(minename empcopy2.ename%type)
+is
+begin
+    delete from empcopy2 where ename like minename;
+    commit;
+end;
+-------------------------------
+execute del_ename('s%');
+-------------------------------
+
+
+
+
 
 
 
