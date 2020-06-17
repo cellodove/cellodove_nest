@@ -1,0 +1,27 @@
+package kim.a.service;
+
+import java.util.Scanner;
+
+import kim.a.DAO.TestDAO;
+
+public class Update {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("수정할 이름을 입력하세요");
+		String dname = scanner.next();
+
+		System.out.println("수정할 장소를 입력하세요");
+		String loc = scanner.next();
+
+		System.out.println("수정할 번호를 입력하세요");
+		int deptno = scanner.nextInt();
+
+		TestDAO testDAO = new TestDAO();
+		testDAO.update(dname, loc, deptno);
+
+		scanner.close();
+
+	}
+}
