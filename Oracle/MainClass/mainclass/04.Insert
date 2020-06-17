@@ -1,0 +1,29 @@
+package kim.a.service;
+
+import java.util.Scanner;
+
+import kim.a.DAO.TestDAO;
+
+public class Insert {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("입력할 번호를 입력하세요");
+		int deptno = scanner.nextInt();
+
+		System.out.println("입력할 이름을 입력하세요");
+		String dname = scanner.next();
+
+		System.out.println("입력할 장소를 입력하세요");
+		String loc = scanner.next();
+
+		
+
+		TestDAO testDAO = new TestDAO();
+		testDAO.insert(deptno, dname, loc);
+		
+		scanner.close();
+
+	}
+
+}
