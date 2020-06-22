@@ -43,10 +43,12 @@ post는 파라미터를 보내주는것 입력하는것
 
 
 
+아파치 서버와 아파치 톰켓은 다르다.
+나는 아파치 톰켓을 사용함
 
 
-
-
+URIEncoding="UTF-8" useBodyEncodingForURI="true"/>
+톰캣7.0이하 get메소드 인코딩설정
 
 
 
