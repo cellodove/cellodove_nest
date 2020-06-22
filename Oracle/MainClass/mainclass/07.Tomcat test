@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ <%@ page import="java.util.Calendar" %>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>달력테스트</title>
+</head>
+<body>
+<%
+Calendar calender = Calendar.getInstance();
+int hour  = calender.get(Calendar.HOUR_OF_DAY);
+%>
+
+<font color = "red"><%out.println(hour+"분"); %> </font>
+</body>
+</html>
