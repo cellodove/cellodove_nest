@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 가로 분할 </title>
+</head>
+<body>
+<!-- 문단을 세로로 묶는다.-->
+<div>
+<!-- 문단을 묶어서 가로로 내용을 출력한다.-->
+<span> 자바 </span> <span> jsp </span> <span> 웹 표준</span>
+</div>
+</body>
+</html>
