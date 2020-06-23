@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>비순차적 목록</title>
+</head>
+<body>
+	<!-- 비순차적인 목록을 표시하여 출력한다. -->
+	<ul>
+		<!-- 항목을 추가하여 출력한다.-->
+		<li>HTML</li>
+		<li>자바스크립트</li>
+		<li>제이쿼리</li>
+		<li>JSP</li>
+	</ul>
+</body>
+</html>
