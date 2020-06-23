@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 세로 분할 </title>
+</head>
+<body>
+<!-- 문단을 묶어서 세로로 내용을 출력한다.-->
+<div> 자바 </div> <div> jsp </div> <div> 웹 표준 </div>
+</body>
+</html>
