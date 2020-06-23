@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- 웹브라우저의 아이콘을 지정한다.-->
+
+<link rel="shortcut icon"  href="../favicon.ico" type="image/x-icon" />
+<title> 아이콘 설정 </title>
+</head>
+<body>
+아이콘을 설정한다.
+</body>
+</html>
