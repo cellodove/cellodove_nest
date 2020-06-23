@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 수평선 </title>
+</head>
+<body>
+	<!-- 인용문을 지정하고 수평건을 설정하여 출력한다. -->
+	자바<blockquote cite="https://www.oracle.com/"></blockquote><hr> HTML
+</body>
+</html>
