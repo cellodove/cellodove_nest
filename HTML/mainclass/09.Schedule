@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계획서</title>
+</head>
+<body>
+	<table border="2">
+
+		<tr bgcolor="Yellow">
+			<td align="center">계획/날짜</td>
+			<td align="center">8월1주</td>
+			<td align="center">8월2주</td>
+			<td align="center">8월3주</td>
+			<td align="center">8월4주</td>
+			<td align="center">9월1주</td>
+			<td align="center">9월2주</td>
+			<td align="center">9월3주</td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">아이디어 회의 및 채택</td>
+			<td bgcolor="blue" align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">벤치마킹</td>
+			<td bgcolor="red" align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">구현가능 매뉴선정</td>
+			<td bgcolor="green" align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">역할분담</td>
+			<td bgcolor="Orange" align="center"></td>
+			<td bgcolor="Orange" align="center"></td>
+			<td bgcolor="Orange" align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">패키지 설계</td>
+			<td align="center"></td>
+			<td bgcolor="Purple" align="center"></td>
+			<td bgcolor="Purple" align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">DB 작업</td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td bgcolor="blue" align="center"></td>
+			<td bgcolor="blue" align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">코딩 작업</td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td bgcolor="green" align="center"></td>
+			<td bgcolor="green" align="center"></td>
+			<td bgcolor="green" align="center"></td>
+			<td align="center"></td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">DB완료</td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td bgcolor="red" align="center"></td>
+			<td bgcolor="red" align="center"></td>
+			<td align="center"></td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">1차 테스트및 PPT작업</td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td bgcolor="Orange" align="center"></td>
+			<td bgcolor="Orange" align="center"></td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">2차 테스트및 개발완료</td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td bgcolor="Purple" align="center"></td>
+			<td bgcolor="Purple" align="center"></td>
+		</tr>
+
+		<tr>
+			<td bgcolor="Yellow" align="center">발표</td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td bgcolor="blue" align="center"></td>
+		</tr>
+
+	</table>
+</body>
+</html>
