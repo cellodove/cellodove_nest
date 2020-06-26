@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 페이지 이름을 나타낸다 -->
+<title>어깨동무 로그인</title>
+
+
+<!-- 스타일 시트를 호출한다.-->
+<!-- 스타일시트는 html에서 안되는것을 표현하기위해 사용하는것임 <h1>테그같은것들 -->
+<!-- link 태그를 사용하여 링크를 건다. rel속성에서 스타일시트라는것을 명시해준다. -->
+<!-- sype속성에서 text/css라고 css파일인것을 명시한다. -->
+<!-- href속성에서 해당 파일의 경로 및 파일명을 명시한다. -->
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+</head>
+<body>
+
+	<!-- 문단을 세로로 묶는다.-->
+	<!-- div 태그는 Division의 약자로 웹사이트의 레이아웃을 만들때 주로 사용한다. -->
+	<!-- id는 스타일을 지정할 때 한 가지만 지정해서 쓰는 이름 하나의 문서에 고유한 id하나밖에 쓸 수 없다. -->
+	<!-- div안에 들어있는 id는 없어도되는듯 없어도 출력같음 -->
+	<div id="contentsArea">
+		<div id="usefulArea">
+			<div class="login">
+
+				<!-- 페이지 제목을 나타냄 -->
+				<h1>로그인</h1>
+
+				<!-- 데이터 처리에 관한 기본 구성을 설정한다.(Form) -->
+				<form action="#" method="post" id="loginForm" name="loginForm">
+
+					<!-- 폼을 정밀하게 구조화한다.-->
+					<!--<fieldset> 태그는 <form> 요소에서 연관된 요소들을 하나의 그룹으로 묶을 때 사용합니다.-->
+					<!-- <fieldset> 요소는 하나의 그룹으로 묶은 요소들 주변으로 박스 모양의 선을 그려줍니다.
+					또한, <legend> 요소를 사용하면 <fieldset> 요소의 캡션(caption)을 정의할 수 있습니다. -->
+					<fieldset>
+						<!-- 그룹화한 범위의 이름을 캡션으로 표시한다. -->
+						<legend>로그인 폼</legend>
+
+						<p>
+							<label for="userId"> 아이디 </label> <input type="text" id="userId"
+								name="userId" required placeholder="Guest">
+						</p>
+						<p>
+							<label for="userPw"> 비밀번호 </label> <input type="password"
+								id="userPw" name="userPw" required placeholder="4자 이상">
+						</p>
+						<p>
+							<button type="submit">로그인</button>
+						</p>
+					</fieldset>
+				</form>
+				<div class="memberLink">
+					<a href="#" class="join"> 회원가입 </a> <a href="#" class="find">아이디/비밀번호
+						찾기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
