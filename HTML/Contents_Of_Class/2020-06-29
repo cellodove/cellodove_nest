@@ -1,0 +1,5 @@
+
+boolean 자료형
+참과 거짓으로 true와 false로 표현한다.
+논리 연산에서는 ""(빈 문자열), 0, NaN(Not a Number), null, undefined는 false로 취급하고
+그 이외를 true로 취급한다.
