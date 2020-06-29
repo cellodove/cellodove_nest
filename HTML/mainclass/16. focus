@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>포커스 이동</title>
+</head>
+<body>
+	<form>이름:
+	<input type="text" onfocus="this.value='이름'"
+		onblur="this.value='이름을 적으세요'">
+	</form>
+
+</body>
+</html>
