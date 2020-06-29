@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>매개변수 반환</title>
+<script type="text/javascript">
+	function total(a, b) {
+		return (a + b);
+	}
+</script>
+
+
+</head>
+
+<body>
+	<script type="text/javascript">
+		document.write("*계산값:&nbsp;" + total(50, 50));
+	</script>
+
+</body>
+</html>
