@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>예외처리</title>
+<script type="text/javascript">
+	function message() {
+
+		try {
+			alertA("반갑습니다")
+		} catch (e) {
+			text = "이 페이지는 오류가 발생하였습니다.\n";
+			text += "오류" + e.message + "\n";
+			text += "계속 실행하려면 확인 버튼을 클릭하십시오 \n";
+			alert(text);
+		}
+
+	}
+</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="오류확인" onclick="message()"/>
+	</form>
+</body>
+</html>
