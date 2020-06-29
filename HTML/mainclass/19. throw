@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>예외처리문</title>
+<script type="text/javascript">
+	function myFunction() {
+		mess = document.getElementById("mess");
+		mess.innerHTML = "";
+		try {
+			x = document.getElementById("de").value;
+			if (x == "") {
+				throw "아무것도 입력하지 않았습니다.";
+			}
+			if (isNaN(x)) {
+				throw "숫자가 아닙니다.";
+			}
+			if (x < 10) {
+				throw "숫자의 범위가 넘어갔습니다.";
+			}
+		} catch (err) {
+			mess.innerHTML = "오류: " + err;
+		}
+	}
+</script>
+</head>
+<body>
+	<p>10 이상의 수를 입력하세요.</p>
+	<form>
+		<input id="de" type="text">
+		<button type="button" onclick="myFunction( )">오류 확인</button>
+		<p id="mess"></p>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
