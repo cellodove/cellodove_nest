@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function sum(a, b, c) {
+		d = a + b + c;
+		document.write(d);
+		return;
+	}
+</script>
+
+
+
+</head>
+<body>
+	<script type="text/javascript">
+		sum(10, 20, 30)
+	</script>
+
+
+
+</body>
+</html>
