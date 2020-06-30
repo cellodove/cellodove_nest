@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>브라우저 정보</title>
+<script type="text/javascript">
+	document.write("브라우저 코드: ", navigator.appCodeName, "</br>");
+	document.write("브라우저 이름: ", navigator.appName, "</br>");
+	document.write("브라우저 정보: ", navigator.appVersion, "</br>");
+	document.write("브라우저 User Agent:: ", navigator.userAgent, "</br>");
+	document.write("시스템 정보: ", navigator.platform, "</br>");
+	document.write("설치된 플러그인의 개수: ", navigator.plugins.length, "</br>");
+</script>
+</head>
+<body>
+</body>
+</html>
+
