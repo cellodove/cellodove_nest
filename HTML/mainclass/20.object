@@ -4,19 +4,22 @@
 <meta charset="UTF-8">
 <title>프로토타입 객체 생성</title>
 <script type="text/javascript">
-//
+//빈객체 생성
 people={};
-
+//객체에 값을 생성해서 넣는다.
 people.name="홍길동";
 
+//객체가 함수를 가실수있음 이름을 출력하는 함수를 만듬
 people.sayName = function(){
 	document.write("이름: " + this.name + "</br>");
 }
 
+//이름을 반환하는 함수를 만들어 객체에 넣는다. 
 people.getName=function(){
 	return this.name;
 }
 
+//출력하는 함수를 객체에 넣음
 people.sayInfo = function(){
 	document.write(this.getName()+"님 반갑습니다.");
 }
@@ -29,10 +32,3 @@ people.sayInfo();
 <body>
 </body>
 </html>
-
-
-
-
-
-
-
