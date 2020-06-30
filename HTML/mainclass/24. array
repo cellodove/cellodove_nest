@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>점수 확인</title>
+<script type="text/javascript">
+	sung = new Array(6);
+
+	sung[0] = "홍길동";
+
+	sung[1] = 100;
+	sung[2] = 85;
+	sung[3] = 90;
+
+	hap = sung[1] + sung[2] + sung[3];
+	sung[4] = hap;
+
+	sung[5] = hap / 3;
+
+	document.write("이름: " + sung[0] + "</br>");
+	document.write("국어: " + sung[1] + "</br>");
+	document.write("영어: " + sung[2] + "</br>");
+	document.write("수학: " + sung[3] + "</br>");
+	document.write("총점: " + sung[4] + "</br>");
+	document.write("평균: " + sung[5] + "</br>");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
