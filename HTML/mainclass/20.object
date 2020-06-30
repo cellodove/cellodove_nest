@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>프로토타입 객체 생성</title>
+<script type="text/javascript">
+//
+people={};
+
+people.name="홍길동";
+
+people.sayName = function(){
+	document.write("이름: " + this.name + "</br>");
+}
+
+people.getName=function(){
+	return this.name;
+}
+
+people.sayInfo = function(){
+	document.write(this.getName()+"님 반갑습니다.");
+}
+
+people.sayName();
+people.sayInfo();
+
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
