@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>브라우저 종류 확인</title>
+<script type="text/javascript">
+
+	function getWebBrowserName() {
+		
+		kind = navigator.userAgent.toLowerCase();
+
+		if (kind.indexOf("chrome") != -1) {
+			return "Chrome";
+		} else if (kind.indexOf("opera") != -1) {
+
+			return "Opera";
+
+		} else if (kind.indexOf("firefox") != -1) {
+
+			return "Firefox";
+
+		} else if (kind.indexOf("safari") != -1) {
+
+			return "Safari";
+
+		} else if (kind.indexOf("msie") != -1 || kind.indexOf("trident") != -1) {
+
+			return "Internet Explorer";
+
+		} else {
+			return "Unknown";
+		}
+	}
+
+	document.write("브라우저 종류: " + getWebBrowserName());
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
