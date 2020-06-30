@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문자열 기능 적용</title>
+<script type="text/javascript">
+//문자열 객체를 생성하고 속성값을 지정한다.
+str = new String("javascript");
+
+document.write("문자열 길이:" + str.length + "</br>");
+document.write("소문자:" + str.toLowerCase() + "</br>");
+document.write("대문자:" + str.toUpperCase() + "</br>");
+document.write("2번째 문자:" + str.charAt(2) + "<br>");
+document.write("j 문자의 위치:" + str.indexOf("j") + "</br>");
+document.write("0부터 3이전의 문자:" + str.substring(0, 3) + "<br>");
+document.write("!! 결합:" + str.concat("!!") + "<br>");
+document.write("분리:" + str.split("a") + "<br>");
+
+</script>
+</head>
+<body>
+</body>
+</html>
+
