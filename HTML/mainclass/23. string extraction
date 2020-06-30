@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문자열 추출</title>
+<script type="text/javascript">
+
+	url = "https://www.naver.com/index.html";
+	
+	document.write("문자열: " + url + "</br>");
+
+	//문자열을 카운트한 5를 할당 ://전까지만 카운트
+	doubleSlash = url.indexOf("://");
+
+	// /의 위치를 계산한다.
+	slash = url.indexOf("/", doubleSlash + 3);
+
+	// //에서 /사이에있는것을 도메인이라 칭한다.
+	domain = url.indexOf(doubleSlash + 3, slash);
+
+	document.write("도메인: " + domain);
+</script>
+</head>
+<body>
+</body>
+</html>
+
