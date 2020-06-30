@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문자열 변환</title>
+<script type="text/javascript">
+
+	//문자열 객체를 생성하고 속성값을 지정한다.
+	function myFunction() {
+		str = document.getElementById("de").innerHTML;
+
+		txt = str.replace("전우치", "홍길동");
+
+		document.getElementById("de").innerHTML = txt;
+	}
+</script>
+</head>
+<body>
+	<button onclick="myFunction()">글자교체</button>
+	<p id="de">전우치 입니다.</p>
+</body>
+</html>
