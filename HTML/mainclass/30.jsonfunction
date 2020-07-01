@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열형 사용</title>
+<script type="text/javascript">
+
+	sayHello = {
+
+		"name" : "홍길동",
+		"eng" : function() {
+			call = document.getElementById("call");
+			call.innerHTML = "Hello" + this.name;
+		},
+		"kor" : function() {
+			call = document.getElementById("call");
+			call.innerHTML = "안녕" + this.name;
+		}
+	}
+</script>
+</head>
+<body>
+	<button onclick="sayHello.eng()">영어인사말 클릭</button>
+	<button onclick="sayHello.kor()">한국 인사말 클릭</button>
+	<p id="call"></p>
+
+</body>
+</html>
