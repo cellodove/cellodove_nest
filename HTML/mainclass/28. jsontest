@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>button submit</title>
+<script type="text/javascript">
+	song = {
+		"name" : "홍길동",
+		"age" : "33",
+		"gender" : "여자"
+	}
+
+	song.gender = "남자";
+	
+	document.write("이름: " + song.name + "</br>");
+
+	document.write("나이: " + song.age + "</br>");
+
+	document.write("성별: " + song.gender + "</br>");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
