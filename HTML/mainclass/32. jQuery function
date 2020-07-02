@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+
+		$("#hello1").html("Hello jQuery");
+		alert($(".test1").html());
+
+	});
+
+	function initpage() {
+		$("#hello").html("Hello jQuery");
+	}
+
+	function sayHello() {
+		alert($(".test").html());
+	}
+
+	$(initpage)
+	$(sayHello)
+	
+</script>
+</head>
+<body>
+	<p id="hello">
+	<p class="test">콜백함수가 아니다.</p>
+
+	<p id="hello1">
+	<p class="test1">콜백함수다.</p>
+
+
+</body>
+</html>
