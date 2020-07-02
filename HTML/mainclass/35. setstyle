@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스타일 지정</title>
+<style type="text/css">
+.spotlight {
+	background-color: #ff0;
+}
+
+.redtext {
+	color: #f00;
+}
+
+.largetext {
+	font-size: 30pt;
+}
+
+.italictext {
+	font-style: italic;
+}
+</style>
+
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("span").addClass("redtext");
+		$("div").addClass("spotlight");
+		$("#simpletext1").addClass("largetext");
+		$(".simpletext1").addClass("italictext");
+	});
+</script>
+</head>
+<body>
+	<span id="simpletext1">simple</span>
+	<div class="simpletext1">JQuery</div>
+	<span id="simpletext2">basic</span>
+	<div id="simpletext3">example</div>
+</body>
+</html>
