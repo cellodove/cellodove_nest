@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요소 적용</title>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("p").hide();
+		});
+	});
+</script>
+</head>
+
+<body>
+	<p>버튼을 클릭하면 문구가 숨겨집니다.</p>
+	<button>button click</button>
+</body>
+</html>
