@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요소 찾기</title>
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	output = function(selector) {
+		resultText = "";
+		// 요소의 개수를 콘솔로 출력한다.
+		console.log("\n" + selector + "로 검색된 요소의 개수 " + $(selector).size());
+		$(selector).each(function() {
+			// 요소의 텍스트 내용을 추가한다.
+			resultText += $(this).text() + "\t"
+		});
+		// 콘솔로 추가된 요소의 텍스트 내용을 출력한다.
+		console.log(resultText + "\n");
+	}
+	$(document).ready(function() {
+		// id를 가지는 모든 span 요소를 찾는다.
+		$("span[id]");
+		output("span[id]");
+		// id의 값이 simpletext1이 모든 span 요소를 찾는다.
+		$("span[id='simpletext1']");
+		output("span[id='simpletext1']");
+		// id의 값이 simpletext1이 아닌 모든 span 요소를 찾는다.
+		$("span[id!='simpletext1']");
+		output("span[id!='simpletext1']");
+		// id의 값이 complex로 시작하는 모든 span 요소를 찾는다.
+		$("span[id^='complex']");
+		output("span[id^='complex']");
+		// id의 값이 text1로 끝나는 모든 span 요소를 찾는다.
+		$("span[id$='text1']");
+		output("span[id$='text1']");
+		// id의 값에 test를 포함하는 모든 span 요소를 찾는다.
+		$("span[id*='text']");
+		output("span[id*='text']");
+	});
+</script>
+</head>
+<body>
+	<div>
+		<span id="simpletext1"> one </span> 
+		<span class="simpletext2">two </span> 
+		<span id="complextext1"> three </span> 
+		<span id="complextext2">four </span>
+		 <span id="complex"> five </span>
+	</div>
+</body>
+</html>
