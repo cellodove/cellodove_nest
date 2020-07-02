@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스 이벤트</title>
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		// 마우스가 특정 영역 안에 있다가 나갔을 때 이벤트를 발생시킨다.
+		$("#input").mouseout(function() {
+			$("#result").html("mouse out 이벤트 : 마우스가 영역 안에 있다가 나갈 때 발생");
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="input">마우스 이벤트 확인</div>
+	<div id="result"></div>
+</body>
+</html>
