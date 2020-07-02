@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>준비 핸들러 사용</title>
+<style type="text/css">
+span {
+	font-size: 30pt;
+}
+
+.red {
+	color: #f00;
+}
+
+.italic {
+	font-style: italic;
+}
+</style>
+
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(myFun);
+	function myFun() {
+		$('span').addClass('red');
+	}
+	$(document).ready(function() {
+		$('span').addClass('italic');
+	});
+</script>
+
+</head>
+<body>
+	<span>simple</span>
+</body>
+</html>
