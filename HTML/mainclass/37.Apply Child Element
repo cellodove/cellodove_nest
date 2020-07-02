@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자식 요소 적용</title>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("div>em").each(function() {
+			$(".result").append($(this).text() + "\n");
+
+		});
+
+	});
+</script>
+</head>
+
+<body>
+	<div>
+		<em>one</em> <span> <em> three </em>
+		</span> <em> two </em>
+	</div>
+
+	<div>
+		<span> 부모와 자식으로 검색된 요소: </span> <span class="result"></span>
+	</div>
+</body>
+</html>
