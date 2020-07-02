@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS호출</title>
+
+<style type="text/css">
+span {
+	font-size: 30pt;
+}
+
+.red {
+	color: #f00;
+}
+
+.italic {
+	font-style: italic;
+}
+</style>
+
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	//html의 dom트리가 생성되기 전에 span요소를 검색하여 접근하므로 적용되지 않는다.
+	$('span').addClass('italic');
+</script>
+
+</head>
+<body>
+	<span>simple</span>
+	<script type="text/javascript">
+		//html의 dom트리가 생성되고 span요소를 검색하여 접근하므로 적용된다.	
+		$('span').addClass('red');
+	</script>
+
+</body>
+</html>
