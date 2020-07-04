@@ -45,3 +45,33 @@ grant 명령어는 데이터베이스의 권한을 부여한다.
 revoke 명령어는 데이터베이스의 권한을 취소한다.
 
 
+
+create table board (
+num number(4),
+title varchar2(30),
+author varchar2(12),
+content varchar2(600),
+writeday date default sysdate
+);
+desc board;
+
+
+alter table salesman
+add (sal number(7, 2));
+desc salesman;
+
+
+alter table salesman
+add constraint id_pk primary key (id);
+desc salesman;
+
+alter table salesman
+modify (sal number(10, 2));
+desc salesman;
+
+
+
+
+
+
+
