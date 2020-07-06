@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요소 숨기기</title>
+
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		$("button").click(function() {
+			// 첫 번째 요소의 내용을 화면에 표시한다.
+			$("span:first").hide();
+		});
+	});
+</script>
+</head>
+<body>
+	<span> 안녕하세요. </span>
+	<span> 반갑습니다. </span>
+	<button>글 숨기기</button>
+</body>
+</html>
