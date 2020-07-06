@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 효과</title>
+<style type="text/css">
+#region {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	margin: auto;
+}
+
+#images {
+	width: 400px;
+	height: 200px;
+}
+
+#images a img {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border: 0;
+}
+
+#direction {
+	width: 360px;
+	margin: auto;
+}
+
+.leftbtn {
+	margin-top: 10px;
+}
+
+.rightbtn {
+	margin-left: 290px;
+	margin-top: 10px;
+}
+</style>
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		$(".leftbtn").click(function(event) {
+			// 그림이 왼쪽으로 2초 동안 슬라이딩한다.
+			$("#leftimage").animate({
+				marginLeft : -210
+			}, 2000);
+		});
+		$(".rightbtn").click(function(event) {
+			// 그림이 오른쪽으로 2초 동안 슬라이딩한다.
+			$("#leftimage").animate({
+				marginLeft : 0
+			}, 2000);
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="region">
+		<div id="images">
+			<a href="#"><img src="../img/image3.jpg" id="leftimage" /></a> <a
+				href="#"><img src="../img/image4.jpg" id="rightimage" /></a>
+		</div>
+	</div>
+	<div id="direction">
+		<button class="leftbtn">&laquo;</button>
+		<button class="rightbtn">&raquo;</button>
+	</div>
+</body>
+</html>
