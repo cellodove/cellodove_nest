@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>데이터 테이블</title>
+<link rel="stylesheet" type="text/css"
+	href="../js/DataTables/jquery.dataTables.min.css">
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="../js/DataTables/jquery.dataTables.min.js"
+	type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// 테이블의 행 개수 제한하고 칼럼을 필터링한다.
+		$("#example").DataTable();
+	});
+</script>
+</head>
+<body>
+	<table class="display" id="example">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>name</th>
+				<th>price</th>
+				<th>description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>레몬</td>
+				<td align="right">3000원</td>
+				<td>레몬에 포함된 쿠엔산은 피로 해소에 좋다.</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>키위</td>
+				<td align="right">2000원</td>
+				<td>키위는 다이어트와 미용에도 매우 좋다.</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>블루베리</td>
+				<td align="right">5000원</td>
+				<td>블루베리에 포함된 안토시아닌은 눈 피로에 효과가 있다.</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>체리</td>
+				<td align="right">5000원</td>
+				<td>체리는 맛이 단 성분이 많고 피로 해소에 잘 듣는다.</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>멜론</td>
+				<td align="right">6000원</td>
+				<td>멜론에는 비타민A와 칼륨이 많이 포함되어 있다.</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
