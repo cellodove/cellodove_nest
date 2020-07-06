@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>쿠키 정보</title>
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery.cookie.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		c_user_id = $.cookie("user_id");
+		c_user_pw = $.cookie("user_pw");
+		if (c_user_id && c_user_pw) {
+			$("#user_id").val(c_user_id);
+			$("#user_pw").val(c_user_pw);
+			$("#auto_save").prop("checked", true);
+		}
+		$("#auto_save").change(function() {
+			if ($(this).is(":checked")) {
+				if (confirm("정보가 노출될 위험이 있습니다. 정보를 저장하시겠습니까?")) {
+					// 1년간 모든 경로에서 유효하도록 저장한다.
+					$.cookie("user_id", $("#user_id").val(), {
+						"expire" : 365,
+						"path" : "/"
+					});
+					$.cookie("user_pw", $("#user_pw").val(), {
+						"expire" : 365,
+						"path" : "/"
+					});
+				}
+			} else {
+				$.removeCookie("user_id");
+				$.removeCookie("user_pw");
+				$("#user_id").val("");
+				$("#user_pw").val("");
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<form action="#">
+		<p>
+			<label for="user_id"> 아이디 </label> <input type="text" name="user_id"
+				id="user_id">
+		</p>
+		<p>
+			<label for="user_pw"> 비밀번호 </label> <input type="password"
+				name="user_pw" id="user_pw">
+		</p>
+		<p>
+			<label for="auto_save"> 아이디/비밀번호 저장 </label> <input type="checkbox"
+				name="auto_save" id="auto_save" />
+		</p>
+	</form>
+</body>
+</html>
