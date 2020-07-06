@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 가입</title>
+<style type="text/css">
+#signupForm label[for] {
+	width: 120px;
+	display: inline-block;
+}
+
+#signupForm label {
+	font-size: 14px;
+	padding: 5px 0;
+}
+
+#signupForm input {
+	border: 1px solid #ccc;
+	padding: 2px 5px;
+	vertical-align: middle;
+}
+
+#signupForm input.error, #signupForm textarea.error {
+	border: 1px dashed red;
+}
+
+#signupForm label.error {
+	color: red;
+	width: auto;
+	font-size: 12px;
+	padding: 0 10px;
+}
+</style>
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		// JSON 형식으로 유효성 검사의 규칙을 지정한다.
+		$("#signupForm").validate({
+			// 테스트를 위하여 유효성 검사가 완료되어도 전송을 처리하지 않는다.
+			debug : true,
+			// 검사할 필드와 검사 항목을 나열한다.
+			rules : {
+				// 필수 입력을 지정한다.
+				username : "required",
+				age : {
+					// 필수 여부를 지정한다.
+					required : true,
+					// 숫자 입력을 지정한다.
+					digits : true
+				},
+				userid : {
+					required : true,
+					// 최소길이를 지정한다.
+					minlength : 4
+				},
+				pwd : {
+					required : true,
+					minlength : 4,
+					// 최대길이를 지정한다.
+					maxlength : 8
+				},
+				pwd_re : {
+					required : true,
+					equalTo : "#pwd"
+				},
+				email : {
+					required : true,
+					email : true
+				},
+				weburl : {
+					url : true
+				},
+				topic : {
+					required : "#newsletter:checked",
+					minlength : 2
+				},
+				agree : "required"
+			},
+			// 검사를 충족하지 못하면 표시될 메시지를 나열한다.
+			messages : {
+				username : "이름은 필수 입력 항목입니다.",
+				age : {
+					required : "나이를 입력해 주세요.",
+					digits : "숫자로만 입력할 수 있습니다."
+				},
+				userid : {
+					required : "아이디를 입력해 주세요.",
+					minlength : "아이디는 최소 {0} 글자입니다."
+				},
+				pwd : {
+					required : "비밀번호를 입력해 주세요.",
+					minlength : "비밀번호는 최소 {0} 글자입니다.",
+					maxlength : "비밀번호는 최대 {0} 글자입니다.",
+				},
+				pwd_re : {
+					required : "비밀번호 확인 값을 입력해 주세요.",
+					equalTo : "비밀번호 확인이 잘못되었습니다."
+				},
+				email : {
+					required : "이메일을 입력해 주세요.",
+					email : "이메일이 형식에 맞지 않습니다."
+				},
+				weburl : {
+					url : "올바른 인터넷 주소 형식이 아닙니다."
+				},
+				topic : {
+					required : "뉴스레터 가입 시 관심 분야 선택은 필수입니다.",
+					minlength : "최소 {0} 개 이상 체크해 주세요."
+				},
+				agree : "약관 동의에 체크해 주세요."
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<h1 class="title">회원 가입</h1>
+	<form id="signupForm" action="#" method="post">
+		<p>
+			<label for="username"> 이름 * </label> <input type="text"
+				name="username" id="username">
+		</p>
+		<p>
+			<label for="age"> 나이 * </label> <input type="text" name="age"
+				id="age">
+		</p>
+		<p>
+			<label for="userid"> 아이디 * </label> <input type="text" name="userid"
+				id="userid">
+		</p>
+		<p>
+			<label for="pwd"> 비밀번호 * </label> <input type="password" name="pwd"
+				id="pwd">
+		</p>
+		<p>
+			<label for="pwd_re"> 비밀번호 확인 * </label> <input type="password"
+				name="pwd_re" id="pwd_re">
+		</p>
+		<p>
+			<label for="email"> 이메일 * </label> <input type="email" name="email"
+				id="email">
+		</p>
+		<p>
+			<label for="weburl"> 홈페이지/블로그 </label> <input type="url"
+				name="weburl" id="weburl">
+		</p>
+		<p>
+			<label for="newsletter"> 뉴스레터 가입 </label> 가입합니다. <input
+				type="checkbox" name="newsletter" id="newsletter">
+		</p>
+		<p>
+			<label for="topic"> 관심 분야 </label> 신간 도서 <input type="checkbox"
+				name="topic" id="topic" value="reading"> 개봉 영화 <input
+				type="checkbox" name="topic" id="topic" value="movie"> 새 음반
+			<input type="checkbox" name="topic" id="topic" value="music">
+		</p>
+		<p>
+			<label for="agree"> 약관 동의 * </label> <label> 동의합니다. <input
+				type="checkbox" name="agree" id="agree">
+			</label>
+		</p>
+		<p>
+			<input type="submit" value="전송" class="submit">
+		</p>
+	</form>
+</body>
+</html>
