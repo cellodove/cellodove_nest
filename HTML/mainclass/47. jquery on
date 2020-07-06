@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 위임</title>
+<style type="text/css">
+p {
+	background: yellow;
+	font-weight: bold;
+	padding: 5px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("p").on("click",function(){
+		$(this).after("<p> 열심히 하는 것만이 취업의 지름길! </p>");		
+	});
+});
+
+</script>
+</head>
+<body>
+	<p> 클릭하시면 연속으로 위임됩니다.</p>
+</body>
+</html>
