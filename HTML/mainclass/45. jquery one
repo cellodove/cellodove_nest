@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연속 이벤트 적용</title>
+<style type="text/css">
+img {
+	width: 140px;
+	height: 120px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("img").one("click", function(event) {
+			$target = $(event.target);
+			$target.width($target.width() * 2);
+			$target.height($target.height() * 2);
+
+		});
+
+	});
+</script>
+</head>
+<body>
+<img src="../img/im18.jpg">
+</body>
+</html>
