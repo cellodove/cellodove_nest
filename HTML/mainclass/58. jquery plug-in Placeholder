@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 폼</title>
+<style type="text/css">
+.loginForm {
+	position: relative;
+	width: 435px;
+}
+
+.loginForm .box {
+	width: 326px;
+}
+
+.loginForm .box .iText {
+	width: 300px;
+	margin: 3px 0;
+	padding: 10px 12px;
+	border: 1px solid #e1e1e1;
+}
+
+.loginForm .box p {
+	margin-top: 1em;
+}
+
+.loginForm .box p span, .loginForm .box p input {
+	height: 18px;
+	font-size: 11px;
+	color: #737373;
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+.loginForm .loginBtn {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 80px;
+	height: 60px;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	line-height: 60px;
+	text-align: center;
+	text-shadow: 1px 1px 1px #004773;
+	background: #333;
+}
+</style>
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery.placeholder.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		$(".emulate input, .emulate textarea").placeholder({
+			// 커서를 이동할 때 힌트 표시가 나오도록 지정한다.
+			force : true
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="emulate">
+		<div class="loginForm">
+			<form action="#">
+				<div class="box">
+					<label for="id"></label> <input type="text" class="iText" name="id"
+						id="id" placeholder="아이디"> <label for="pass"></label> <input
+						type="password" class="iText" name="pass" id="pass"
+						placeholder="패스워드"> <a href="#" class="loginBtn">로그인</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
