@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>댓글 적용</title>
+<style type="text/css">
+* {
+	padding: 0;
+	margin: 0;
+	color: #333;
+}
+
+ul {
+	list-style: none;
+}
+
+#container {
+	padding: 30px 20px;
+}
+
+h1 {
+	font-size: large;
+	border-left: 10px solid #7baeb5;
+	border-bottom: 1px solid #7baeb5;
+	padding: 10px;
+	width: auto;
+}
+
+#comment_write {
+	padding: 20px 15px;
+	border-bottom: 1px solid #7baeb5;
+}
+
+#comment_write label {
+	display: inline-block;
+	width: 80px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#comment_write input[type="text"], #comment_write textarea {
+	border: 1px solid #ccc;
+	vertical-align: middle;
+	padding: 3px 10px;
+	font-size: 12px;
+	line-height: 150%;
+}
+
+#comment_write textarea {
+	width: 380px;
+	height: 90px;
+}
+
+.comment_item {
+	font-size: 13px;
+	color: #333;
+	padding: 15px;
+	border-bottom: 1px dotted #ccc;
+	line-height: 150%;
+}
+
+.comment_item .writer {
+	color: #555;
+	line-height: 200%;
+}
+
+.comment_item .writer input {
+	vertical-align: middle;
+}
+
+.comment_item .writer .name {
+	color: #222;
+	font-weight: bold;
+	font-size: 14px;
+}
+</style>
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		// 입력양식의 데이터에 대한 유효성 검사를 하고 전송한다.
+		$("#comment_form").submit(function() {
+			if (!$("#user_name").val()) {
+				alert("이름을 입력하세요.");
+				$("#user_name").focus();
+				return false;
+			}
+			if (!$("#comment").val()) {
+				alert("내용을 입력하세요.");
+				$("#comment").focus();
+				return false;
+			}
+			date = new Date();
+			yy = date.getFullYear();
+			mm = date.getMonth() + 1;
+			dd = date.getDate();
+			hh = date.getHours();
+			mi = date.getMinutes();
+			ss = date.getSeconds();
+			if (mm < 10) {
+				mm = "0" + mm;
+			}
+			if (dd < 10) {
+				dd = "0" + dd;
+			}
+			if (hh < 10) {
+				hh = "0" + hh;
+			}
+			if (mi < 10) {
+				mi = "0" + mi;
+			}
+			if (ss < 10) {
+				ss = "0" + ss;
+			}
+			today = yy + "-" + mm + "-" + dd + " " + hh + ":" + mi + ":" + ss;
+			new_li = $("<li>");
+			new_li.addClass("comment_item");
+			writer_p = $("<p>");
+			writer_p.addClass("writer");
+			name_span = $("<span>");
+			name_span.addClass("name");
+			name_span.html($("#user_name").val() + "님");
+			date_span = $("<span>");
+			date_span.html(" / " + today + " ");
+			del_input = $("<input>");
+			del_input.attr({
+				"type" : "button",
+				"value" : "삭제하기"
+			});
+			del_input.addClass("delete_btn");
+			content_p = $("<p>");
+			content_p.html($("#comment").val());
+			writer_p.append(name_span).append(date_span).append(del_input);
+			new_li.append(writer_p).append(content_p);
+			$("#comment_list").append(new_li);
+			$("#user_name").val("");
+			$("#comment").val("");
+			return false;
+		});
+		// 글에 대한 삭제와 수정 버튼의 이벤트를 미리 정의해 놓고 연속적으로 이벤트를 발생시킨다.
+		$(document).on("click", ".delete_btn", function() {
+			if (confirm("정말 선택하신 항목을 삭제하시겠습니까?")) {
+				$(this).parents(".comment_item").remove();
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="container">
+		<h1>어깨동무 댓글</h1>
+		<div id="comment_write">
+			<form id="comment_form">
+				<div>
+					<label for="user_name"> 작성자 </label> <input type="text"
+						name="user_name" id="user_name">
+				</div>
+				<div>
+					<label for="comment"> 댓글 내용 </label>
+					<textarea name="comment" id="comment"></textarea>
+				</div>
+				<input type="submit" value="저장하기">
+			</form>
+		</div>
+		<ul id="comment_list">
+		</ul>
+	</div>
+</body>
+</html>
