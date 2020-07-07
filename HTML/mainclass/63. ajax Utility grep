@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>특정 조건의 요소 선택</title>
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		list = [ 1, 9, 3, 8, 6, 1, 5, 9, 4, 7, 3, 8, 6, 9, 1 ];
+
+		list = $.grep(list, function(element, index) {
+			return (element != 5 & index > 4);
+		});
+
+		$("div").text(list.join(","));
+
+	});
+</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
