@@ -1,0 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<link rel="stylesheet" type="text/css" href="../css/layout.css">
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#join").submit(function() {
+			if (!$("input[name='user_name']").val()) {
+				alert("이름을 입력하세요.");
+				$("input[name='user_name']").focus();
+				return false;
+			}
+			if (!$("input[name='gender']").is(":checked")) {
+				alert("성별을 선택해 주세요.");
+				$("input[name='gender']:eq(0)").focus();
+				return false;
+			}
+			if (!$("input[name='hobby']").is(":checked")) {
+				alert("취미를 선택해 주세요.");
+				$("input[name='hobby']:eq(0)").focus();
+				return false;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<form action="./request.jsp" method="post" id="join">
+		<fieldset>
+			<legend> 회원가입 </legend>
+			<div class="input_group">
+				<label for="user_name"> 이름 </label> <input type="text"
+					name="user_name" id="user_name">
+			</div>
+			<div class="input_group">
+				<label for="gender"> 성별 </label> <input type="radio" name="gender"
+					id="gender" value="m"> 남자 <input type="radio" name="gender"
+					id="gender" value="f"> 여자
+			</div>
+			<div class="input_group">
+				<label for="hobby"> 취미 </label> <input type="checkbox" value="축구"
+					name="hobby" id="hobby"> 축구 <input type="checkbox"
+					value="야구" name="hobby" id="hobby"> 야구 <input
+					type="checkbox" value="농구" name="hobby" id="hobby"> 농구
+			</div>
+			<div class="input_group">
+				<input type="submit" value="전송"> <input type="reset"
+					value="취소">
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>
