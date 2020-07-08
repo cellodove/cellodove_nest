@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>쿠키 정보</title>
+<link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+<body>
+	<div class="input_group">
+		쿠키 정보
+		<%--일차원 배열 쿠키 객체를 생성한다.--%>
+		<%
+			Cookie[] cookie = request.getCookies();
+		if (cookie == null) {
+		%>
+	</div>
+	<div class="input_group">
+		쿠키가 존재하지 않습니다.
+		<%--쿠키 길이를 반복한다.--%>
+		<%
+			} else {
+			for (int i = 0; i < cookie.length; i++) {
+		%>
+	</div>
+	<div class="input_group">
+		<%--쿠키 객체의 이름과 값을 호출하고 출력한다.--%>
+		<%=cookie[i].getName()%>(<%=cookie[i].getValue()%>) &nbsp;&nbsp;
+		<%
+			}
+		}
+		%>
+	</div>
+</body>
+</html>
