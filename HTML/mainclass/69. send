@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>데이터 전송</title>
+<link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+<body>
+	<form action="../send" method="get">
+		<fieldset>
+			<legend> 데이터 전송 </legend>
+			<div class="input_group">
+				<label for="id"> 아이디 </label> <input type="text" name="id" id="id"
+					required>
+			</div>
+			<div class="input_group">
+				<input type="submit" value="전송"> <input type="reset"
+					value="취소">
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>
