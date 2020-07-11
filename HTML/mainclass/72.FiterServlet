@@ -1,0 +1,19 @@
+package servlet.min.controller;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+@WebServlet("/FiterServlet")
+public class FiterServlet extends HttpServlet { private static final long serialVersionUID = 1L;
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws
+    ServletException, IOException {
+    //필터로 지정하면 실행을 하지 않아도 된다. 
+    //request.setCharacterEncoding("UTF-8"); 
+    String name = request.getParameter("name"); 
+    response.setContentType("text/html;charset=UTF-8"); 
+    PrintWriter out = response.getWriter( ); 
+    out.println("name=" + name); 
+  }
+}
