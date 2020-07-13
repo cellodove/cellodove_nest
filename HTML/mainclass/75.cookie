@@ -1,0 +1,26 @@
+<%@page import="java.net.URLDecoder"%>
+<%@page import="java.net.URLEncoder"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	Cookie cookie = new Cookie("name", URLEncoder.encode("홍길동", "utf-8"));
+cookie.setMaxAge(600);
+response.addCookie(cookie);
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>쿠키 정보</title>
+</head>
+<body>
+	<div>
+		cookie name:<%=cookie.getName()%><br> 
+		cookie value:<%=URLDecoder.decode(cookie.getValue(), "utf-8")%><br>
+		cookie maxTime:<%=cookie.getMaxAge()%><br> 
+		<a href="./cookieview.jsp">get cookieValue</a>
+	</div>
+
+</body>
+</html>
