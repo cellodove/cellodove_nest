@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>포워드 출력</title>
+</head>
+<body>
+이름:<%=request.getParameter("name") %>
+아이디:<%=request.getParameter("id") %>
+전화번호:<%=request.getParameter("tel") %>
+
+
+
+</body>
+</html>
