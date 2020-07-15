@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>포워드 액션</title>
+</head>
+<body>
+<%request.setCharacterEncoding("utf-8"); %>
+	<jsp:forward page='<%=request.getParameter("page")%>'>
+		<jsp:param name="tel" value="010-1234-4566" />
+	</jsp:forward>
+</body>
+</html>
