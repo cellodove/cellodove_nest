@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조건확인</title>
+</head>
+<body>
+	파라미터 없음:
+	<c:out value="${empty param.name}" />
+	<br>
+	<%-- 파라미터가없을때 참을 반환한다. 그래서if문은 파라미터가없을때 실행한다. --%>
+	<c:if test="${empty param.name}">
+		<form action="#" method="get">
+			<fieldset>
+				<div>
+					이름: <input type="text" name="name">
+				</div>
+				<div>
+					<input type="submit">
+				</div>
+			</fieldset>
+		</form>
+	</c:if>
+
+	<c:if test="${!empty param.name}">
+	반갑습니다. <c:out value="${param.name}" />님!
+	</c:if>
+</body>
+</html>
