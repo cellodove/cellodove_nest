@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<jsp:useBean id="bean" class="a.b.c.d.Command" scope="page"></jsp:useBean>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이름출력</title>
+</head>
+<body>
+<% String name = bean.getName(); %>
+자바빈에서 호출한 이름은 <%= name %>
+</body>
+</html>
