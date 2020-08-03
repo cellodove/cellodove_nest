@@ -1,0 +1,5 @@
+package min.a.beanfactory;
+public interface MessageBean {
+// 추상 메소드를 선언한다.
+public void call(String name);
+}
