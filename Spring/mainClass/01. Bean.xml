@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/
+schema/beans/spring-beans.xsd">
+<!-- Bean 객체를 생성하고 id 속성값은 식별자로 인스턴스가 된다.-->
+<bean class="min.a.beanfactory.MessageBeanKr" id="messageBean"></bean>
+</beans>
