@@ -1,0 +1,7 @@
+package min.a.beanfactory;
+public class MessageBeanEn implements MessageBean {
+// 상속받은 메소드에 영어 인사말 지원을 설정한다.
+public void call(String name) {
+System.out.println("Hello, " + name + "!");
+}
+}
