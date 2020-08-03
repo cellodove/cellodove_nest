@@ -1,0 +1,7 @@
+package min.a.beanfactory;
+public class MessageBeanKr implements MessageBean {
+// 상속받은 메소드에 한글 인사말 지원을 설정한다.
+public void call(String name) {
+System.out.println("안녕하세요." + name + " 씨!");
+}
+}
