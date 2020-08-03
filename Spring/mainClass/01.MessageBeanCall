@@ -1,0 +1,16 @@
+package min.a.beanfactory;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+public class MessageBeanCall {
+public static void main(String[ ] args) {
+// 절대 경로를 지정하여 파일 시스템의 설정 파일 정보를 읽어 온다.
+FileSystemResource fileSystemResource = new FileSystemResource("src/main/resources/bean/Bean.xml");
+// 외부 자원으로부터 설정 정보를 읽어와 Bean 객체를 생성한다.
+BeanFactory factory = new XmlBeanFactory(fileSystemResource);
+// Bean 객체를 호출한다.
+MessageBean messageBean = factory.getBean("messageBean", MessageBean.class);
+// Bean 객체를 출력한다.
+messageBean.call("홍길동");
+}
+}
