@@ -1,0 +1,14 @@
+package min.b.basisconstructor;
+public class BasisConstructor {
+private static BasisConstructor basisConstructor;
+// 스테틱 메소드를 생성한다.
+public static BasisConstructor getInstance( ) {
+if (basisConstructor == null) {
+basisConstructor = new BasisConstructor( );
+}
+return basisConstructor;
+}
+public BasisConstructor( ) {
+System.out.println("기본생성자를 호출한다.");
+}
+}
