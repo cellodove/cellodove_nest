@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/
+schema/beans/spring-beans.xsd">
+<bean class="min.c.parameter.Parameter" id="parameter">
+<!-- 필드 생성자에 값을 주입한다.-->
+<constructor-arg value="홍길동"/>
+</bean>
+</beans>
