@@ -1,0 +1,12 @@
+package min.b.basisconstructor;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+public class BasisConstructorCall {
+public static void main(String[ ] args) {
+// 상대 경로를 지정하여 설정 파일 정보를 읽어 온다.
+ApplicationContext context = new GenericXmlApplicationContext("bean/Bean.xml");
+// Bean 객체를 호출한다.
+BasisConstructor basisConstructor = (BasisConstructor)context.getBean("basisConstructor");
+basisConstructor.getInstance( );
+}
+}
