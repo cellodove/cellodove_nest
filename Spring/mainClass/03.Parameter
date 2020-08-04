@@ -1,0 +1,15 @@
+package min.c.parameter;
+public class Parameter {
+private String name;
+// 기본생성자를 선언하고 Parameter가 Bean 객체가 된다.
+public Parameter( ) {
+};
+// 필드 생성자를 선언하고 Parameter가 Bean 객체가 된다.
+public Parameter(String name) {
+this.name = name;
+}
+@Override
+public String toString( ) {
+return "이름 출력: " + name;
+}
+}
