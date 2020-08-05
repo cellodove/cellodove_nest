@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean class="min.a.c.ByNameBeanService" id="byNameBeanService"> 
+<property name="byNameBean" ref="byNameBean"></property>
+</bean>
+
+<bean class="min.a.c.ByNameBean" id="byNameBean">
+<property name="name" value="홍길동"/>
+<property name="age" value="33"/>
+</bean>
+
+</beans>
