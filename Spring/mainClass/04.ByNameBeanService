@@ -1,0 +1,25 @@
+package min.a.c;
+
+public class ByNameBeanService {
+	public ByNameBeanService() {
+		// TODO Auto-generated constructor stub
+	}
+	
+ 	private ByNameBean byNameBean;
+
+	public ByNameBeanService(ByNameBean byNameBean) {
+		this.byNameBean = byNameBean;
+	}
+
+	public ByNameBean getByNameBean() {
+		return byNameBean;
+	}
+
+	public void setByNameBean(ByNameBean byNameBean) {
+		this.byNameBean = byNameBean;
+	}
+	
+	
+ 	
+
+}
