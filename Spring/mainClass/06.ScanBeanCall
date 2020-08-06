@@ -1,0 +1,21 @@
+package min.f.scan3;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class ScanBeanCall {
+
+	public static void main(String[] args) {
+
+		//상대경로를 지정하여 설정 파일 정보를 읽어온다.
+		ApplicationContext context = new GenericXmlApplicationContext("Bean/Bean.xml");
+		
+		//빈객체를 호출한다.
+		ScanBeanService scanBeanService = (ScanBeanService) context.getBean("scanBeanService");
+		
+		System.out.println(scanBeanService);
+		
+		
+	}
+
+}
