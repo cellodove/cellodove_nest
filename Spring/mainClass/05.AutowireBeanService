@@ -1,0 +1,22 @@
+package min.b.autowired;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class AutowireBeanService {
+	
+	private AutowireBean autowireBean;
+
+	public AutowireBean getAutowireBean() {
+		return autowireBean;
+	}
+	
+	//오토와이어를 위에 변수에 써주게되면 set안써줘도됨 그리고 프라이빗을 없애면 get도 없앨수있기때문에 변수선언과 어노테이션만으로 끝낼수있음 만약 이런식의코드가있다면
+	//이렇게 생략되었다는걸 파악할줄알아야함
+	@Autowired
+	public void setAutowireBean(AutowireBean autowireBean) {
+		this.autowireBean = autowireBean;
+	}
+	
+	
+
+}
