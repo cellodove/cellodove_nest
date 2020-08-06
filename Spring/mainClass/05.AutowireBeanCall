@@ -1,0 +1,18 @@
+package min.b.autowired;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class AutowireBeanCall {
+	
+	public static void main(String[] args) {
+		//상대경로를 지정하고 설저파일 정보를 읽어온다.
+		ApplicationContext context = new GenericXmlApplicationContext("Bean/Bean.xml");
+		//빈객체를 가지고온다.
+		AutowireBeanService autowireBeanService = (AutowireBeanService) context.getBean("autowireBeanService");
+		
+		AutowireBean autowireBean = autowireBeanService.getAutowireBean();
+		System.out.println(autowireBean);
+		
+	}
+}
