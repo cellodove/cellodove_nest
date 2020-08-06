@@ -1,0 +1,14 @@
+package min.f.scan3;
+
+import org.springframework.stereotype.Component;
+
+//자동으로 빈객체로 등록한다.
+@Component
+public class ScanBean {
+	
+
+	@Override
+	public String toString() {
+		return "여러분, 반갑습니다.";
+	}
+}
