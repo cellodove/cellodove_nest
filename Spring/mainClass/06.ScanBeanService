@@ -1,0 +1,17 @@
+package min.f.scan3;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+//자동으로 빈객체로 등록하고 서비스 레이어를 지원한다.
+@Service
+public class ScanBeanService {
+	//의존관계를 자동으로 설정한다.
+	@Autowired
+	ScanBean scanBean;
+
+	@Override
+	public String toString() {
+		return "친애하는," + scanBean;
+	}
+}
