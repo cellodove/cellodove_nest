@@ -1,0 +1,26 @@
+package min.a.proxy;
+
+import java.util.List;
+
+public class UserServiceProxyImp implements UserService {
+	UserService userService;
+	
+
+	public UserServiceProxyImp(UserService userService) {
+		super();
+		this.userService = userService;
+	}
+
+
+	@Override
+	public List<String> findAll() {
+		System.out.println("Before findAll");
+		
+		List<String> list = userService.findAll();
+		System.out.println("After findAll");
+		
+		
+		return list;
+	}
+
+}
