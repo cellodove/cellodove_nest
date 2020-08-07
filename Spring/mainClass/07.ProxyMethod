@@ -1,0 +1,28 @@
+package min.a.proxy;
+
+
+public class ProxyMethod {
+
+	public static void start() {
+		System.out.println("proxy dont use");
+		startNotProxy();
+		System.out.println();
+		System.out.println("proxy use");
+		startProxy();
+
+	}
+
+	private static void startNotProxy() {
+		UserService userService = new UserServiceImp();
+		userService.findAll();
+
+	}
+	
+	private static void startProxy() {
+		UserServiceImp userServiceImp = new UserServiceImp();
+		UserService userService = new UserServiceProxyImp(userServiceImp);
+		userService.findAll();
+
+	}
+
+}
