@@ -1,0 +1,10 @@
+package min.a.proxy;
+
+public class ProxyCall {
+	public static void main(String[] args) {
+		ProxyMethod proxyMethod = new ProxyMethod();
+		ProxyMethod.start();
+		
+	}
+
+}
