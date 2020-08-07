@@ -1,0 +1,15 @@
+package min.a.proxy;
+
+import java.util.List;
+
+public class UserServiceImp implements UserService {
+
+	@Override
+	public List<String> findAll() {
+		System.out.println("findAll Call");
+		return null;
+	}
+
+	
+	
+}
