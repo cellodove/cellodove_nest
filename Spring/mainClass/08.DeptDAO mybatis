@@ -1,0 +1,40 @@
+package min.spring.templatedao;
+
+import java.util.List;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import min.spring.templatedto.DeptDTO;
+import min.spring.templateservice.DeptDaoService;
+
+@Repository
+public class DeptDAO implements DeptDaoService {
+	@Autowired
+	SqlSessionTemplate sqlSessionTemplate;
+
+	@Override
+	public List<DeptDTO> selectAll() {
+		return sqlSessionTemplate.selectList("selectAll");
+	}
+
+	@Override
+	public DeptDTO select(int deptno) {
+		return sqlSessionTemplate.selectOne("select", deptno);
+	}
+
+	@Override
+	public void insert(DeptDTO deptDTO) {
+		sqlSessionTemplate.insert("insert", deptDTO);
+	}
+
+	@Override
+	public void update(DeptDTO deptDTO) {
+		sqlSessionTemplate.update("update", deptDTO);
+	}
+
+	@Override
+	public void delete(int deptno) {
+		sqlSessionTemplate.delete("delete", deptno);
+	}
+}
