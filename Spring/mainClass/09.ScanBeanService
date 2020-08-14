@@ -1,0 +1,12 @@
+package min.f.scan;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ScanBeanService {
+
+	public void comcall() {
+		System.out.println("자동");
+	}
+
+}
