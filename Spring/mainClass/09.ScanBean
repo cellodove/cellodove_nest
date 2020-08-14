@@ -1,0 +1,22 @@
+package min.f.scan;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ScanBean {
+	
+	private ScanBeanService scanBeanService;
+	public ScanBeanService getScanBeanService() {
+		return scanBeanService;
+	}
+	
+	@Autowired
+	public void setScanBeanService(ScanBeanService scanBeanService) {
+		this.scanBeanService = scanBeanService;
+	}
+	
+
+	
+	
+}
