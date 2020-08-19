@@ -1,0 +1,27 @@
+package min.spring.test.http.method;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class ArticleController {
+	@Autowired
+	private ArticleService articleService;
+
+	@RequestMapping(method = RequestMethod.GET)
+	public String form() {
+		return "./article/articleform";
+	}
+
+	@RequestMapping(method = RequestMethod.POST)
+	public String form(@ModelAttribute("write") ArticleDTO articleDTO) {
+		articleService.writeArticle(articleDTO);
+
+		return "./article/articleview";
+
+	}
+
+}
