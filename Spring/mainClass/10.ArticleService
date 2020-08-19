@@ -1,0 +1,14 @@
+package min.spring.test.http.method;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ArticleService {
+	
+	public void writeArticle(ArticleDTO articleDTO) {
+		System.out.println("글 등록 내용" + articleDTO);
+		
+		articleDTO.setNumber(articleDTO.getNumber());
+	}
+
+}
