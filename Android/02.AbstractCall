@@ -1,0 +1,13 @@
+package test;
+
+public class AbstractCall {
+	public static void main(String[] args) {
+		ClassExtend classExtend = new ClassExtend();
+		
+		classExtend.methodAbstract();
+		
+		AbstractClass abstractClass = AbstractClass.getInstance();
+		
+		abstractClass.methodAbstract();
+	}
+}
