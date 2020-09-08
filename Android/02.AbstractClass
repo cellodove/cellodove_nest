@@ -1,0 +1,20 @@
+package test;
+
+public abstract class AbstractClass {
+
+	static AbstractClass abstractClass = new AbstractClass() {
+		// 추상 메소드를 상속하여 { }(코드 블록)으로 메소드를 구현한다.
+		@Override
+		protected void methodAbstract() {
+			System.out.println("스테틱 메소드를 통한 추상 메소드 출력");
+		}
+	};
+	
+	public static AbstractClass getInstance() {
+		return abstractClass;
+	}
+	
+	// 추상 메소드를 생성한다.
+	protected abstract void methodAbstract( );
+	
+}
