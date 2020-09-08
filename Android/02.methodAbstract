@@ -1,0 +1,10 @@
+package test;
+
+public class ClassExtend extends AbstractClass {
+
+	@Override
+	protected void methodAbstract() {
+		System.out.println("구현체를 통한 추상 메소드 출력");
+	}
+	
+}
