@@ -1,0 +1,20 @@
+package test;
+
+public class StaticInner {
+	int a = 10;
+	private int b = 20;
+	static int c = 30;
+	
+	static class Inner{
+		static int d = 40;
+		public void call() {
+			System.out.println(c);
+			System.out.println(d);
+		}
+	}
+	
+	public static void main(String[] args) {
+		StaticInner.Inner inner = new StaticInner.Inner();
+		inner.call();
+	}
+}
