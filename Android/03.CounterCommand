@@ -1,0 +1,9 @@
+package min.h.reservedword.counter;
+public class CounterCommand {
+// 스테틱 멤버변수를 생성한다.
+static int count;
+private int num = 1;
+public int getNum( ) {
+return num;
+}
+}
