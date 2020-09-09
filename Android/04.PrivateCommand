@@ -1,0 +1,8 @@
+package min.j.finalkeywold;
+public class PrivateCommand {
+// 상수를 생성한다.
+private final int NUM = 9;
+public int getNUM( ) {
+return NUM;
+}
+}
