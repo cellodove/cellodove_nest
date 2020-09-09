@@ -1,0 +1,9 @@
+package min.h.reservedword.counter;
+public class CounterCall {
+public static void main(String[ ] args) {
+// 스테틱 멤버변수이므로 클래스로 직접 접근할 수 있다.
+System.out.println("스테틱 멤버변수값 : " + CounterCommand.count);
+CounterCommand command = new CounterCommand( );
+System.out.println("멤버변수값 : " + command.getNum( ));
+}
+}
