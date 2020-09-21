@@ -1,0 +1,34 @@
+package com.example.buttontest;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+public class MainActivity extends AppCompatActivity {
+// 버튼 객체를 생성한다.
+Button button;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+// 초기화 작업을 진행하고 액티비티를 중단할 때 임시로 데이터를 저장한다.
+super.onCreate(savedInstanceState);
+// layout 디렉터리의 activity_main.xml 파일을 연결하여 화면인 액티비티를 설장한다.
+setContentView(R.layout.activity_main);
+// 액션바에 아이콘을 표시할 수 있도록 설정한다.
+getSupportActionBar( ).setDisplayShowHomeEnabled(true);
+// 액션바에 아이콘으로 표시할 이미지를 drawable 디렉터리의 ic_launcher_foreground.xml 파일로 설정한다.
+getSupportActionBar( ).setIcon(R.drawable.ic_launcher_foreground);
+// activity_main.xml 파일의 위젯 id에 접근하여 위젯에 접근하고 위젯 변수에 할당한다.
+button = findViewById(R.id.button1);
+// 버튼에 대한 클릭 이벤트를 발생시킨다.
+button.setOnClickListener(new View.OnClickListener( ) {
+@Override
+// 클릭하여 뷰를 실행시킨다.
+public void onClick(View v) {
+// 리소스의 텍스트로 텍스트 보기만 포함하는 표준 토스트를 만든다.
+Toast.makeText(getApplicationContext( ), "버튼을 눌렀어요",
+// 짧은 시간 동안 토스트 보기를 실행한다.
+Toast.LENGTH_SHORT).show( );
+}
+});
+}
+}
