@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 리니어 레이아웃을 설정한다.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+<!-- 위젯들을 세로 방향으로 나열한다.-->
+android:orientation="vertical">
+<!-- 버튼을 구현한다.-->
+<Button
+<!-- 포함된 내용을 보여줄 수 있는 높이를 설정한다.-->
+android:layout_height="wrap_content"
+<!-- 부모 뷰의 내부 여백을 제외한 너비를 설정한다.-->
+android:layout_width="match_parent"
+<!-- 동작이 필요한 위젯이므로 id 속성을 지정하며 지정하지 않으면 오류가 발생한다.-->
+android:id="@+id/button1"
+<!-- @string은 strings.xml 파일을 가리키며 strBtn1 이름을 strings.xml에서 설정하지 않으면 오류가 발생한다.-->
+android:text="@string/strBtn1"></Button>
+</LinearLayout>
