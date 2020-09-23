@@ -1,0 +1,136 @@
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+//액티비티를 상속받는다.
+public class  MainActivity extends AppCompatActivity {
+    EditText edit1, edit2;
+    Button btnAdd, btnSub, btnMul, btnDiv, btnRem;
+    TextView textResult;
+    String num1, num2;
+    Integer result;
+    Button[] numButtons = new Button[10];
+
+    //10개 숫자 버튼의 id 값을 배열로 선언한다.
+    Integer[] numBtnIDs = {R.id.BtnNum0, R.id.BtnNum1, R.id.BtnNum2, R.id.BtnNum3, R.id.BtnNum4
+                            , R.id.BtnNum5, R.id.BtnNum6, R.id.BtnNum7, R.id.BtnNum8, R.id.BtnNum9};
+    //증가값의 변수를 설정한다.
+    int i;
+
+    @SuppressLint("ClickableViewAccessibility")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        setTitle("계산기");
+
+        edit1 = findViewById(R.id.Edit1);
+        edit2 = findViewById(R.id.Edit2);
+        btnAdd = findViewById(R.id.BtnAdd);
+        btnSub = findViewById(R.id.BtnSub);
+        btnMul = findViewById(R.id.BtnMul);
+        btnDiv = findViewById(R.id.BtnDiv);
+        btnRem = findViewById(R.id.BtnRem);
+        textResult = findViewById(R.id.TextResult);
+
+        //더하기 버튼을 터치했을때의 리스너를 설정한다.
+        btnAdd.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("SetTextI18n")
+            public boolean onTouch(View arq0, MotionEvent arq1) {
+                num1 = edit1.getText().toString();
+                num2 = edit2.getText().toString();
+                result = Integer.parseInt(num1) + Integer.parseInt(num2);
+                textResult.setText("계산결과: "+ result.toString());
+                return false;
+            }
+        });
+
+        //빼기 버튼을 터치했을때의 리스너를 설정한다.
+        btnSub.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("SetTextl18n")
+            public boolean onTouch(View arq0, MotionEvent arq1) {
+                num1 = edit1.getText().toString();
+                num2 = edit2.getText().toString();
+                result = Integer.parseInt(num1) - Integer.parseInt(num2);
+                textResult.setText("계산결과: "+ result.toString());
+                return false;
+            }
+        });
+
+        //곱하기 버튼을 터치했을때의 리스너를 설정한다.
+        btnMul.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("SetTextl18n")
+            public boolean onTouch(View arq0, MotionEvent arq1) {
+                num1 = edit1.getText().toString();
+                num2 = edit2.getText().toString();
+                result = Integer.parseInt(num1) * Integer.parseInt(num2);
+                textResult.setText("계산결과: "+ result.toString());
+                return false;
+            }
+        });
+
+        //나누기 버튼을 터치했을때의 리스너를 설정한다.
+        btnDiv.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("SetTextl18n")
+            public boolean onTouch(View arq0, MotionEvent arq1) {
+                num1 = edit1.getText().toString();
+                num2 = edit2.getText().toString();
+                result = Integer.parseInt(num1) / Integer.parseInt(num2);
+                textResult.setText("계산결과: "+ result.toString());
+                return false;
+            }
+        });
+
+        //나머지 버튼을 터치했을때의 리스너를 설정한다.
+        btnRem.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("SetTextl18n")
+            public boolean onTouch(View arq0, MotionEvent arq1) {
+                num1 = edit1.getText().toString();
+                num2 = edit2.getText().toString();
+                result = Integer.parseInt(num1) % Integer.parseInt(num2);
+                textResult.setText("계산결과: "+ result.toString());
+                return false;
+            }
+        });
+
+        //숫자버튼 10개를 할당하여 반복한다.
+        for (i=0; i<numBtnIDs.length; i++) {
+            numButtons[i] = findViewById(numBtnIDs[i]);
+        }
+
+        // 숫자 버튼 10개에 대해서 클릭이벤트를 처리한다.
+        for (i = 0; i < numBtnIDs.length; i++) {
+
+            //중첩클래스의 로컬 변수와 같은 역할이므로 상수처럼 final 지정어를 선언해야 예외가 발생하지 않는다.
+            final int index;
+            index = i;
+
+            // 숫자 버튼을 클릭했을 때의 리스너를 설정한다.
+            numButtons[index].setOnClickListener(new View.OnClickListener( ) {
+                public void onClick(View v) {
+                    // 포커스가 되어 있는 에디트텍스트에 숫자를 추가한다.
+                    if (edit1.isFocused( ) == true) {
+                        num1 = edit1.getText( ).toString( ) + numButtons[index].getText( ).toString( );
+                        edit1.setText(num1);
+                    } else if (edit2.isFocused( ) == true) {
+                        num2 = edit2.getText( ).toString( ) + numButtons[index].getText( ).toString( );
+                        edit2.setText(num2);
+                    } else {
+                        Toast.makeText(getApplicationContext( ), "먼저 에디트텍스트 선택", Toast.LENGTH_SHORT).show( );
+                    }
+                }
+            });
+        }
+    }
+}
