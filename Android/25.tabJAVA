@@ -1,0 +1,41 @@
+package com.example.myapplicationdfdfdfdfdfdf;
+
+import android.app.TabActivity;
+import android.os.Bundle;
+import android.widget.TabHost;
+
+
+//곧 사라질 클래스와 메소드에 대하여 무시하고 실행한다.
+@SuppressWarnings("deprecation")
+public class MainActivity extends TabActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //이전체 구조는 결국 커스텀 테그를 만들어주는것이고 만든 커스텀테그를 사용하는것이라고 생각할수있다.
+        //탭호스트 클래스의 인스턴스에 탭호스트를 호출하여 할당한다.
+        TabHost tabHost = getTabHost();
+
+        //탭스펙 클래스의 인스턴스에 새로운 탭에 음악별이라는 이름을 추가하여 할당한다.
+        TabHost.TabSpec tabSpecSong = tabHost.newTabSpec("SONG").setIndicator("음악별");
+        //탭스펙을 탭과 연결한다.
+        tabSpecSong.setContent(R.id.tabSong);
+        //탭을 추가한다.
+        tabHost.addTab(tabSpecSong);
+
+        //탭스펙 클래스의 인스턴스에 새로운 탭에 가수별이라는 이름을 추가하여 할당한다.
+        TabHost.TabSpec tabSpecArtist = tabHost.newTabSpec("ARTIST").setIndicator("가수별");
+        //탭스펙을 탭과 연결한다.
+        tabSpecArtist.setContent(R.id.tabArtist);
+        //탭을 추가한다.
+        tabHost.addTab(tabSpecArtist);
+
+        TabHost.TabSpec tabSpecType = tabHost.newTabSpec("TYPE").setIndicator("종류별");
+        tabSpecType.setContent(R.id.tabType);
+        tabHost.addTab(tabSpecType);
+
+        //탭을 종료한다.
+        tabHost.setCurrentTab(0);
+
+    }
+}
